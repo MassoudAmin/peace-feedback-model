@@ -1,2 +1,56 @@
-# peace-feedback-model
-Replication package for the peace-feedback-models
+# Peace as a Coupled Feedback System — replication package
+
+Companion to: Amin, S. Massoud. 2026. "Peace as a Coupled Feedback System: Loops, Thresholds, and an Out-of-Sample Test on Armed-Conflict Onsets, 1991–2025." Manuscript, September 2026. The same analysis is reported in Chapter 10 and Appendix D of *The Coupled World* (manuscript).
+
+Everything here is public. The scripts rebuild the tables and figures of the paper from public datasets; the assembled country-year panels are included so that the yearly results can be checked without downloading the source data. The monthly results need one UCDP file, named below.
+
+## Layout
+
+```
+code/      Python scripts (run from the repository root)
+panels/    the country-year and country-month panels the scripts build
+figures/   the figures of the paper, as vector PDF
+data/      empty; put the downloaded source files here (see data/README.md)
+```
+
+## What each script does
+
+| Script | Reads | Writes | Reported in |
+|---|---|---|---|
+| `fit1.py` | UCDP country-year, FAO index, SIPRI | `panels/panel.csv` | onset and escalation models (Sections 6.1, 6.4, 6.5) |
+| `fit3.py` | `panels/panel.csv`, V-Dem, UCDP/PRIO | `panels/panel2.csv` | institutions and 1946 history (Table 2, Sections 6.2, 6.8) |
+| `fit2.py` | UCDP GED (monthly), FAO index | prints | revenge loop and escalation ladder (Table 1); the onset count discussed in Appendix D of the book |
+| `food.py` | WFP prices | `panels/staple_chg.csv` | staple-price changes (Section 6.5) |
+| `food2.py`, `food3.py` | GED, World Bank inflation, `panels/panel2.csv` | `panels/panel3.csv` | food-price tests (Section 6.5) |
+| `res.py` | World Bank reserves, `panels/panel3.csv` | `panels/panel4.csv` | reserves and the buffer interaction (Table 3) |
+| `tone.py`, `tone2.py` | ICEWS events, GED, `panels/panel4.csv` | `panels/tone_all.csv`, `panels/panel5.csv` | press-hostility tests (Section 6.7) |
+| `predict.py` | `panels/panel2.csv`, UCDP, V-Dem | `panels/testwars_rank.csv`, `panels/rank2026.csv` | test-war ranks and the 2026 ranking (Figure 3, Appendix B) |
+| `fig4.py` | `panels/testwars_rank.csv`, `panels/rank2026.csv` | `figures/peace_prediction.*` | Figure 3 |
+| `fig2.py`, `loops4.py`, `peace_eq2.py` | nothing | `figures/peace_control_loop.*`, `figures/peace_causal_loops.*`, `figures/peace_equations.*` | Figures 1, 2, and the equation sheet |
+
+Run order for a full rebuild: `fit1`, `fit3`, `food`, `food2`, `food3`, `res`, `tone`, `tone2`, `fit2`, `predict`, `fig4`. The four figure scripts can be run on their own; `fig4.py` and the three drawing scripts need only what is already in `panels/`.
+
+No fitted model objects are stored. Each script refits from the panels or the source files when it is run; the four figure scripts finish in seconds, and the fitting scripts have not been timed in a fresh environment.
+
+## Running
+
+```
+pip install -r requirements.txt
+python3 code/fig4.py          # from the repository root
+```
+
+All paths in the scripts are relative to the repository root.
+
+## Data
+
+Sources, with the file name each script expects, are listed in `data/README.md`: UCDP 26.1 (country-year, GED, UCDP/PRIO ACD), V-Dem v16, SIPRI Military Expenditure Database, FAO Food Price Index, World Bank Global Database of Inflation and FI.RES.TOTL.MO, WFP Global Food Prices, ICEWS. The source files are not redistributed here; each provider's terms apply.
+
+## Onset definitions
+
+Yearly (panels, `fit1.py`, `predict.py`): a war onset is a country-year with at least 1,000 state-based battle deaths after two years below that level; a conflict onset uses 25 deaths.
+
+Monthly (`fit2.py`): the first month with at least 25 state-based battle deaths after twenty-four months each below 25, followed by at least 1,000 deaths within twelve months. Only UCDP GED state-based events (`type_of_violence == 1`) are counted, and a month with no event is entered as zero. The count of onsets preceded by six months with no recorded deaths has not yet been recomputed under other definitions, windows, or event datasets; that sensitivity test is open.
+
+## Forecast on record
+
+`panels/rank2026.csv` is the model's ranking for 2026, made from 2025 data on September 24, 2026, before any 2026 figures were available. Score it against UCDP's 2026 release.

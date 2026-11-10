@@ -1,8 +1,0 @@
-countries 55; train 1310 / 41; test 167 / 3
-test onsets: Armenia, Lebanon, Tajikistan
-history                                    train AUC 0.709  test AUC 0.653  Brier 0.0178
-history + rule of law                      train AUC 0.761  test AUC 0.730  Brier 0.0176
-history + rule of law + trust              train AUC 0.760  test AUC 0.740  Brier 0.0175
-history + rule of law + trust + product    train AUC 0.760  test AUC 0.740  Brier 0.0175
-base-rate Brier 0.0178
-change in test AUC when trust is added: median 0.004, 2.5th-97.5th percentile -0.012 to 0.059 (1911 resamples by country)

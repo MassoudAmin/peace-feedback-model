@@ -1,0 +1,35 @@
+=== A. Peace agreements (UCDP PA 22.2, 1975–2021) and continuation of fighting in the dyad
+agreement rows 1989–2021: 344; dyad-agreement pairs resolvable: 308; matched to a UCDP dyad with recorded deaths: 299
+active dyad-years 1989–2020: 1734; with an agreement signed that year: 94
+  still active next year:        with agreement 46/94 = 48.9% [39–59]   without 1129/1640 = 68.8% [67–71]
+  active in any of next 5 years: with agreement 53/94 = 56.4% [46–66]   without 1301/1640 = 79.3% [77–81]
+  median log(deaths t+1 / deaths t): with agreement -3.51   without -0.41
+  third party in the agreement            : next-year active  yes 37/75 = 49.3% [38–60]  no 9/19 = 47.4% [27–68];  5-year  yes 41/75 = 54.7% [43–65]  no 12/19 = 63.2% [41–81]
+  full (comprehensive) agreement          : next-year active  yes 9/22 = 40.9% [23–61]  no 37/72 = 51.4% [40–63];  5-year  yes 9/22 = 40.9% [23–61]  no 44/72 = 61.1% [50–72]
+  DDR provision                           : next-year active  yes 12/33 = 36.4% [22–53]  no 34/61 = 55.7% [43–67];  5-year  yes 15/33 = 45.5% [30–62]  no 38/61 = 62.3% [50–73]
+  power-sharing provision                 : next-year active  yes 11/23 = 47.8% [29–67]  no 35/71 = 49.3% [38–61];  5-year  yes 14/23 = 60.9% [41–78]  no 39/71 = 54.9% [43–66]
+  ceasefire provision                     : next-year active  yes 31/62 = 50.0% [38–62]  no 15/32 = 46.9% [31–64];  5-year  yes 34/62 = 54.8% [43–67]  no 19/32 = 59.4% [42–74]
+  of all 374 agreements 1975–2021, UCDP codes 134 as ended
+
+=== B. External support (UCDP ESD 18.1, dyad-year, 1975–2017) and persistence of dyad violence
+ESD dyad-years 1989–2016: 1473; matched to dyads with recorded deaths: 1470
+active dyad-years in ESD coverage: 1436
+  no external support recorded    : active next year 155/296 = 52.4% [47–58];  escalation to >=1,000 next year (from below) 8/269 = 3.0% [2–6];  median log ratio -1.94
+  support to one side             : active next year 773/1089 = 71.0% [68–74];  escalation to >=1,000 next year (from below) 46/896 = 5.1% [4–7];  median log ratio -0.39
+  support to both sides           : active next year 47/51 = 92.2% [81–97];  escalation to >=1,000 next year (from below) 3/34 = 8.8% [3–23];  median log ratio -0.13
+
+=== C. Third-party management (UCDP MIC 22.2, 1993–2007): delay of outside correction, and fighting after it
+management events: 3391; matched conflicts: 3391 events in 29 conflicts
+conflicts first active 1993–2005 with any management event: 11; lag from first active year to first event: median 0 years, mean 0.5, share within the first year 0.82, within two years 0.82
+MIC covers intrastate conflicts in Africa only: 29 conflicts; comparisons below are within those conflicts
+active conflict-years 1993–2006: 173
+  no management event that year     : active next year 30/44 = 68.2% [53–80];  median log ratio -0.03
+  any management event              : active next year 103/129 = 79.8% [72–86];  median log ratio -0.53
+  talks held                        : active next year 99/123 = 80.5% [73–87];  median log ratio -0.53
+
+=== D. Deadly electoral violence (DECO 1.0, 1989–2017) and next-year onset in the country-year panel
+DECO countries with deadly electoral violence: 80; matched to panel names: 80; unmatched: []
+  onset      next year | deadly electoral violence in the previous year: 12/182 = 6.6% [4–11]   | none: 86/4246 = 2.0% [2–2]
+  onset      next year | >=25 electoral deaths previous year: 4/33 = 12.1% [5–27]
+  onset1000  next year | deadly electoral violence in the previous year: 14/336 = 4.2% [2–7]   | none: 42/4733 = 0.9% [1–1]
+  onset1000  next year | >=25 electoral deaths previous year: 9/86 = 10.5% [6–19]

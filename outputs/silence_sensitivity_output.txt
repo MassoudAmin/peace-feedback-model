@@ -1,0 +1,37 @@
+BASELINE: state-based, quiet 24 mo <25, floor 25, >=1000 in 12 mo, silence 6 mo onsets  19  silent  11  share 0.58
+              country   onset  deaths_prior_6m
+           Azerbaijan 1991-12                0
+   Bosnia-Herzegovina 1992-04                0
+             Cameroon 2014-05                0
+                Congo 1997-06                0
+     DR Congo (Zaire) 1996-10                0
+              Eritrea 1998-05                0
+              Lebanon 2006-07                5
+                Libya 2011-02                0
+Russia (Soviet Union) 1999-07                6
+               Rwanda 2001-05                0
+  Serbia (Yugoslavia) 1991-01                0
+              Somalia 2006-10                0
+            Sri Lanka 2005-12               21
+                Sudan 2023-04               47
+                Syria 2011-09               42
+           Tajikistan 1992-05                0
+               Turkey 2015-07                4
+              Ukraine 2014-02                6
+  Yemen (North Yemen) 1994-04               20
+
+silence window 3 months                                                     onsets  19  silent  12  share 0.63
+silence window 12 months                                                    onsets  19  silent  11  share 0.58
+silence window 24 months (= the quiet window itself)                        onsets  19  silent   8  share 0.42
+quiet window 12 months                                                      onsets  26  silent  15  share 0.58
+quiet window 36 months                                                      onsets  15  silent   8  share 0.53
+floor 5 (quiet <5, first month >=5)                                         onsets  15  silent  13  share 0.87
+floor 50                                                                    onsets  25  silent   9  share 0.36
+floor 100                                                                   onsets  32  silent   8  share 0.25
+war threshold 500 in 12 months                                              onsets  26  silent  17  share 0.65
+war threshold 2000 in 12 months                                             onsets  14  silent  10  share 0.71
+conflict onset: quiet <5, >=300 in 12 mo, first >=25 (food3 second definition) onsets  21  silent  18  share 0.86
+all onsets per country (not only the first)                                 onsets  22  silent  12  share 0.55
+silence judged on ALL violence types (non-state + one-sided counted)        onsets  19  silent   8  share 0.42
+onset AND silence on all violence types                                     onsets  19  silent  12  share 0.63
+all types, silence 12 months                                                onsets  19  silent  11  share 0.58

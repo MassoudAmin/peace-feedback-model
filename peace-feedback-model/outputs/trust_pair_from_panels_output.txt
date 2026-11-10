@@ -1,0 +1,42 @@
+== Trust (WVS wave 7 country means joined to the country-year panel, rows from 2020)
+countries 62 rows 310
+onset by trust tercile
+      size  sum  percent
+g                       
+low     77  3.0      3.9
+mid     72  1.0      1.4
+high    70  0.0      0.0
+onset1000 by trust tercile
+      size  sum  percent
+g                       
+low     96  2.0      2.1
+mid     98  4.0      4.1
+high    92  1.0      1.1
+onset or escalation by rule of law (V-Dem) and trust
+             size  sum  percent
+rule trust_                    
+high high      80  0.0      0.0
+     low       58  2.0      3.4
+low  high      59  4.0      6.8
+     low       79  5.0      6.3
+trust vs peak log deaths: Spearman rho -0.32, p 0.012, n 62
+
+== Pairs (pair-year panel)
+pairs 459 pair-years 16065
+fit 1991-2020
+         size  mean
+bin                
+1-24      884   0.6
+25-99     744   1.2
+100-499   475   4.6
+500-999   145  17.9
+test 2021-2024
+         size  mean
+bin                
+1-24      147   0.7
+25-99     109   0.0
+100-499    99   2.0
+500-999    29  31.0
+pair escalation AUC, test rows 2021-2024: 0.897 n 384 escalations 12
+non-state side losses next year on state losses this year: 0.253 (own losses 0.534), n 2908
+state side losses next year on non-state losses this year: 0.127 (own losses 0.633)

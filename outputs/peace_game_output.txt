@@ -1,0 +1,48 @@
+
+Local conditions with these coefficients
+  (11.3) fear loop stable when c2h < c6 + c5*chi, that is chi > 0.25
+  (11.4) violence loop needs enforcement u_law > 0.61 to damp (open-loop coefficient b2 - b4*T = 0.22)
+  (11.5) delay bound tau_d + tau_a < 1/max(b2, c2h) = 4.0 rounds
+  (11.2) arms pair stable when m*m' > k*k': m = 0.3, so k_arm < 0.3
+
+Share of plays that fail (violence passes 8.0), 1000 plays per cell, sensing delay 1 round(s)
+team rule       chi=0.9   chi=0.5   chi=0.2    K   tau_a  k_arm
+Prompt              0.00      0.20      0.99   1.5  1      0.1
+Slow                0.00      0.74      0.99   1.5  4      0.1
+Timid               0.00      0.79      0.99   0.4  1      0.1
+Overreacting        0.00      0.53      0.99   6.0  1      0.1
+Arming              0.64      0.97      1.00   1.5  1      0.45
+
+Share of plays that fail (violence passes 8.0), 1000 plays per cell, sensing delay 3 round(s)
+team rule       chi=0.9   chi=0.5   chi=0.2    K   tau_a  k_arm
+Prompt              0.00      0.37      0.99   1.5  1      0.1
+Slow                0.08      0.85      0.99   1.5  4      0.1
+Timid               0.00      0.82      0.99   0.4  1      0.1
+Overreacting        0.01      0.62      0.99   6.0  1      0.1
+Arming              0.39      0.98      1.00   1.5  1      0.45
+
+Failure share against total delay tau_d + tau_a (K = 1.5, chi = 0.9); bound (11.5) is 4 rounds
+  total delay 2: 0.00
+  total delay 3: 0.00
+  total delay 4: 0.00
+  total delay 5: 0.00
+  total delay 6: 0.03
+  total delay 7: 0.10
+  total delay 8: 0.30
+
+Identification, 'Prompt' teams whose actions scatter 30 percent around their rule, chi = 0.9, 300 plays
+  true open-loop persistence b2 - b4*T = 0.220; true b3 = 0.6; true K = 1.5; true tau_a = 1
+  passive record (violence series only), persistence estimate: -0.282 (sd 0.066)
+  experiment log, open-loop persistence: 0.220 (sd 0.000)
+  experiment log, enforcement coefficient b3: 0.600 (sd 0.000)
+  experiment log, team gain K: 1.482 (sd 0.103); delay tau_a recovered exactly in 100% of plays
+
+Learning teams: gain K starts at 0.4 and is revised after each play; 200 teams, 60 plays each
+  chi = 0.9: failure share in first 10 plays 0.01, in last 10 plays 0.00; median final K 8.54
+  chi = 0.5: failure share in first 10 plays 0.39, in last 10 plays 0.24; median final K 3.28
+  chi = 0.2: failure share in first 10 plays 0.53, in last 10 plays 0.53; median final K 0.87
+
+Sensitivity: every coefficient moved at random within 25 percent, 100 draws
+  low transparency fails more often than high: 100 of 100
+  arming teams fail more often than prompt teams at chi = 0.9: 96 of 100
+  passive record understates the open-loop persistence: 99 of 100

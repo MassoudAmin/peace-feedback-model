@@ -1,0 +1,28 @@
+UCDP war onsets (baseline definition) and the ACLED record in the six months before onset
+              country   onset  ucdp_deaths_prior6       acled_coverage  acled_pv_events_prior6  acled_pv_fatalities_prior6  acled_demos_prior6  pv_per_month_t18_t7  demos_per_month_t18_t7  demos_per_month_t6_t1
+           Azerbaijan 1991-12                   0 covered from 2017-12                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+   Bosnia-Herzegovina 1992-04                   0 covered from 2018-01                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+             Cameroon 2014-05                   0         from 1997-02                    29.0                        66.0                 3.0             1.500000                0.750000               0.500000
+                Congo 1997-06                   0 covered from 1997-01                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+     DR Congo (Zaire) 1996-10                   0 covered from 1997-02                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+              Eritrea 1998-05                   0         from 1997-02                     1.0                         0.0                 0.0             0.166667                0.000000               0.000000
+              Lebanon 2006-07                   5 covered from 2015-12                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+                Libya 2011-02                   0         from 1996-12                     1.0                         0.0                 1.0             0.416667                0.166667               0.166667
+Russia (Soviet Union) 1999-07                   6 covered from 2017-12                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+               Rwanda 2001-05                   0         from 1996-12                     1.0                       700.0                 0.0             1.833333                0.083333               0.000000
+  Serbia (Yugoslavia) 1991-01                   0 covered from 2017-12                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+              Somalia 2006-10                   0         from 1997-02                   165.0                       573.0                56.0            28.416667                4.333333               9.333333
+            Sri Lanka 2005-12                  21 covered from 2009-12                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+                Sudan 2023-04                  47         from 1996-12                   455.0                       919.0               835.0            71.000000              149.750000             139.166667
+                Syria 2011-09                  42 covered from 2016-12                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+           Tajikistan 1992-05                   0 covered from 2018-01                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+               Turkey 2015-07                   4 covered from 2015-12                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+              Ukraine 2014-02                   6 covered from 2017-12                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+  Yemen (North Yemen) 1994-04                  20 covered from 2014-12                     NaN                         NaN                 NaN                  NaN                     NaN                    NaN
+
+Onsets inside ACLED coverage: 6; of these UCDP-silent: 5
+UCDP-silent onsets with ACLED political violence in prior 6 months: 5 of 5
+UCDP-silent onsets with ACLED reported fatalities in prior 6 months: 3 of 5
+Median ACLED political-violence events in prior 6 months, silent onsets: 1; fatalities: 66
+Demonstrations, ratio of monthly rate t-6..t-1 to t-18..t-7: median 0.93, rose in 1 of 5
+Political violence events, same ratio: median 0.98, rose in 2 of 6

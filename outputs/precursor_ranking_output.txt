@@ -1,0 +1,33 @@
+onset within 12 months; four test windows; mean AUC over windows
+conflict history alone 0.831   all ten groups 0.874   silent months: 0.769 and 0.777
+
+precursor group                        cover  alone  gain over history (95% interval)  windows>0  loss if removed  gain, silent months
+Conflict history since 1946             0.97  0.831  (the base)                                     +0.027
+State-based deaths, recent months       1.00  0.777  +0.051  (+0.017 to +0.082)          4/4        +0.029          -0.007
+ACLED violent events and fatalities     0.32  0.760  +0.024  (+0.006 to +0.046)          3/4        -0.010          +0.013
+Institutional levels                    0.80  0.785  +0.022  (-0.012 to +0.053)          3/4        +0.014          +0.067
+Other deaths (non-state, one-sided)     1.00  0.687  +0.015  (+0.001 to +0.031)          4/4        -0.001          +0.019
+Military burden                         0.70  0.684  +0.012  (-0.001 to +0.029)          3/4        +0.004          +0.034
+Food price inflation                    0.06  0.630  +0.009  (-0.000 to +0.022)          3/4        -0.004          +0.004
+Institutional change, three years       0.79  0.643  +0.007  (-0.016 to +0.030)          2/4        -0.004          +0.031
+ACLED demonstrations                    0.32  0.644  +0.003  (-0.014 to +0.017)          2/4        -0.020          +0.026
+News tone (ICEWS)                       0.11  0.507  -0.017  (-0.032 to -0.001)          0/4        -0.009          -0.020
+
+adaptation: AUC by test window for three ways of fitting
+  conflict history + state-based deaths
+    fitted once, to 2005            0.879  0.828  0.917  0.887   mean of windows 2-4: 0.878
+    refitted on all earlier years   0.879  0.853  0.907  0.889   mean of windows 2-4: 0.883
+    refitted on the last ten years  0.852  0.850  0.900  0.866   mean of windows 2-4: 0.872
+  all ten groups
+    fitted once, to 2005            0.828  0.781  0.724  0.759   mean of windows 2-4: 0.755
+    refitted on all earlier years   0.828  0.812  0.936  0.920   mean of windows 2-4: 0.889
+    refitted on the last ten years  0.835  0.843  0.930  0.911   mean of windows 2-4: 0.895
+
+standardized logistic weights by fitting window (conflict history, rule of law, state-based deaths):
+    log years since conflict        -0.39  -0.49  -0.39  -0.41
+    log conflict years since 1946   +0.00  +0.15  +0.15  +0.19
+    rule of law                     -0.52  -0.49  -0.50  -0.53
+    deaths, 1 month                 +0.05  +0.04  +0.04  +0.04
+    deaths, 3 months                +0.10  +0.12  +0.11  +0.12
+    deaths, 12 months               +0.15  +0.13  +0.17  +0.23
+    deaths, 24 months               +0.33  +0.27  +0.24  +0.20

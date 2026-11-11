@@ -1,6 +1,6 @@
 # Peace as a Coupled Feedback System — replication package
 
-Version 2.5, November 11, 2026. Companion to Chapter 11 and Appendix D of S. Massoud Amin, *The Coupled World* (manuscript, 2026), and to the paper "The Feedback Dynamics of Peace: Loops, Thresholds, and Conflict Onset" (manuscript, November 2026).
+Version 2.7, November 11, 2026. Companion to Chapter 11 and Appendix D of S. Massoud Amin, *The Coupled World* (manuscript, 2026), and to the paper "The Feedback Dynamics of Peace: Loops, Thresholds, and Conflict Onset" (manuscript, November 2026).
 
 Everything here is public. The derived panels are shipped, so the yearly results can be checked without downloading any source data. The remaining results need the public source files listed in `data/README.md`.
 
@@ -26,6 +26,9 @@ python3 code/state_estimators.py
 python3 code/estimator_ranking.py
 python3 code/monthly_panel.py      # needs the source files listed in data/README.md
 python3 code/monthly_observer.py   # about twenty minutes
+python3 code/precursor_ranking.py  # about one minute
+python3 code/precursor_pathways.py # about six minutes
+python3 code/within_country.py     # about three minutes
 python3 code/fig4.py
 ```
 
@@ -39,6 +42,9 @@ python3 code/fig4.py
 | `estimator_ranking.py` | `panels/panel2.csv` | runs `state_estimators.py` on four rolling test windows and ranks the estimators (Table D.8, Figure D.2) |
 | `monthly_panel.py` | UCDP GED 26.1 and Candidate Events (January-September 2026), ACLED weekly aggregates, World Bank Real Time Food Prices, `panels/panel2.csv` | builds the country-month panel `panels/monthly_panel.csv`, January 1989 to September 2026 (the panel is not shipped: it contains counts derived from ACLED, whose terms govern redistribution) |
 | `monthly_observer.py` | `panels/monthly_panel.csv` | a monthly Tobit Kalman filter with one, three and six sensors, three logistic regressions and gradient boosting, on four rolling test windows and horizons of 3, 6 and 12 months (Table D.9; Chapter 15, open problem 11) |
+| `precursor_ranking.py` | `panels/monthly_panel.csv`, `panels/panel2.csv`, `panels/tone_all.csv` | ranks ten groups of precursors by their out-of-sample gain over conflict history, with bootstrap intervals, and tests whether the fitted relation changes over time (Table 11.6; Appendix D) |
+| `precursor_pathways.py` | `panels/monthly_panel.csv`, `panels/panel2.csv`, `panels/borders.csv`, `panels/country_size.csv`, `data/iom_dtm_admin0.csv` | tests five ways to raise the forecast: deaths in countries across a land border, IOM displacement counts, country size, gradient boosting, and input selection inside the fitting years; adds the neighbour input to the regression of Table D.9 at 3, 6 and 12 months (Tables 11.6 and D.9; Appendix D) |
+| `within_country.py` | `panels/monthly_panel.csv`, `panels/borders.csv`, the two UCDP GED event files | runs the forecast for each UCDP kind of violence (state-based, non-state, one-sided) by country, and for provinces (first-level administrative areas) with the three kinds summed (Table D.10) |
 | `fig4.py` | `panels/testwars_rank.csv`, `rank2026.csv` | the test-war ranks and the 2026 ranking |
 | `fig2.py`, `fig_loops.py`, `peace_eq2.py` | nothing | the control-loop, causal-loop, and equation-sheet figures (the equation sheet carries the paper's numbering; the book numbers the same conditions (11.1) to (11.5)) |
 
@@ -80,3 +86,7 @@ Monthly (`fit2.py`): the first month with at least 25 state-based battle deaths 
 ## Forecast on record
 
 `panels/rank2026.csv` is the model's ranking for 2026, made from 2025 data on September 24, 2026, before any 2026 figures were available. Score it against UCDP's 2026 release.
+
+## Added in version 2.7
+
+`panels/borders.csv` lists 320 pairs of countries that share a land border, and `panels/country_size.csv` gives one population and one area per country. Both come from the country list of the `countryinfo` Python package, version 1.0.1, with Kosovo added by hand. `data/iom_dtm_admin0.csv` is not shipped. To build it, download the IOM Displacement Tracking Matrix file (admin 0 to 2, from the DTM API), keep the rows with `adminLevel` 0, and sum `numPresentIdpInd` by `admin0Name`, `yearReportingDate`, `monthReportingDate` and `reportingDate` into a column `idp`. Without the file `precursor_pathways.py` skips the displacement test.

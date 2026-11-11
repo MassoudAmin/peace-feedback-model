@@ -1,0 +1,44 @@
+A. Onset of each kind of violence within twelve months, by country; mean AUC over four test windows
+
+state-based: 84 onset episodes in the test windows
+  conflict history and institutions          0.847 (windows 0.81-0.90)   silent months 0.846
+  + recent deaths of the same kind           0.908 (windows 0.89-0.93)   silent months 0.839   step gain +0.061 (+0.027 to +0.097), 4/4
+  + recent deaths of the other two kinds     0.911 (windows 0.89-0.95)   silent months 0.855   step gain +0.003 (-0.008 to +0.014), 2/4
+  + deaths in neighbouring countries         0.918 (windows 0.90-0.95)   silent months 0.872   step gain +0.007 (-0.006 to +0.024), 4/4
+
+non-state (communal, sectarian, militia): 82 onset episodes in the test windows
+  conflict history and institutions          0.811 (windows 0.74-0.85)   silent months 0.802
+  + recent deaths of the same kind           0.885 (windows 0.86-0.91)   silent months 0.811   step gain +0.074 (+0.040 to +0.107), 4/4
+  + recent deaths of the other two kinds     0.905 (windows 0.89-0.92)   silent months 0.841   step gain +0.020 (+0.005 to +0.038), 4/4
+  + deaths in neighbouring countries         0.905 (windows 0.89-0.92)   silent months 0.839   step gain -0.000 (-0.008 to +0.007), 1/4
+
+one-sided (killing of civilians): 99 onset episodes in the test windows
+  conflict history and institutions          0.822 (windows 0.81-0.83)   silent months 0.810
+  + recent deaths of the same kind           0.894 (windows 0.86-0.93)   silent months 0.800   step gain +0.072 (+0.036 to +0.113), 4/4
+  + recent deaths of the other two kinds     0.901 (windows 0.87-0.94)   silent months 0.804   step gain +0.006 (+0.000 to +0.013), 3/4
+  + deaths in neighbouring countries         0.904 (windows 0.87-0.94)   silent months 0.823   step gain +0.003 (-0.007 to +0.014), 3/4
+
+
+B. Onset of organized violence in a province within twelve months (all three kinds summed)
+events placed in a province: 399481 of 434601 (92%); deaths 76% of all recorded deaths
+provinces with a recorded event, 1989 to September 2026: 1823, in 129 countries
+  window 2006-2010: provinces known 1202; onset episodes 248, of them in provinces with no earlier event 26; at-risk province-months 61657, onset rate 0.034
+  window 2011-2015: provinces known 1305; onset episodes 271, of them in provinces with no earlier event 95; at-risk province-months 67527, onset rate 0.026
+  window 2016-2020: provinces known 1469; onset episodes 233, of them in provinces with no earlier event 37; at-risk province-months 74316, onset rate 0.026
+  window 2021-2025: provinces known 1601; onset episodes 334, of them in provinces with no earlier event 76; at-risk province-months 81879, onset rate 0.032
+  what the country forecast knows                      0.768 (windows 0.76-0.77)   silent province-months 0.727
+  + the province's own record                          0.869 (windows 0.85-0.88)   silent province-months 0.764   step gain +0.101 (+0.065 to +0.138), 4/4
+  + rest of the country and provinces within 300 km    0.870 (windows 0.86-0.89)   silent province-months 0.767   step gain +0.001 (-0.004 to +0.006), 2/4
+  the province's own record alone                      0.840 (windows 0.82-0.86)   silent province-months 0.679
+  top tenth, what the country forecast knows: holds 33% of onset province-months; one flagged month in 10.3 is followed by an onset
+  top tenth, + the province's own record: holds 63% of onset province-months; one flagged month in 5.4 is followed by an onset
+  top tenth, + rest of the country and provinces within 300 km: holds 63% of onset province-months; one flagged month in 5.4 is followed by an onset
+
+within a country: mean AUC over countries with at least one onset and one quiet province-month in the window
+  what the country forecast knows                      0.499   (114 country-windows)
+  + the province's own record                          0.773   (114 country-windows)
+  + rest of the country and provinces within 300 km    0.769   (114 country-windows)
+
+real	2m12.926s
+user	2m9.721s
+sys	0m1.188s

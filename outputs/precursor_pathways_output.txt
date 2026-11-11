@@ -1,0 +1,61 @@
+onset within 12 months; four test windows; mean AUC over windows; at-risk country-months 39793, of them silent 37661
+conflict history                       all 0.831   silent 0.769
+history + state-based deaths (working)  all 0.882   silent 0.762
+working + institutional levels          all 0.900   silent 0.828
+
+coverage of at-risk months: Deaths in neighbouring countries 1.00; Displacement (IOM) 0.01; Country size 0.98
+
+1-3. new inputs: gain in AUC (95% interval), windows with a gain
+Deaths in neighbouring countries
+  added to conflict history                    +0.057 (+0.024 to +0.090)  4/4    silent months +0.090 (+0.041 to +0.136)  3/4
+  added to the working model                   +0.034 (+0.007 to +0.066)  3/4    silent months +0.096 (+0.032 to +0.152)  3/4
+  added to working + institutions              +0.014 (+0.003 to +0.026)  3/4    silent months +0.032 (+0.008 to +0.060)  3/4
+Displacement (IOM)
+  added to conflict history                    -0.016 (-0.048 to +0.004)  1/4    silent months +0.006 (+0.001 to +0.011)  2/4
+  added to the working model                   -0.007 (-0.023 to +0.002)  0/4    silent months +0.003 (+0.000 to +0.007)  1/4
+  added to working + institutions              -0.022 (-0.057 to +0.001)  1/4    silent months +0.003 (+0.001 to +0.005)  2/4
+Country size
+  added to conflict history                    +0.012 (-0.004 to +0.031)  3/4    silent months +0.051 (+0.012 to +0.102)  3/4
+  added to the working model                   +0.011 (-0.009 to +0.032)  3/4    silent months +0.045 (-0.025 to +0.093)  3/4
+  added to working + institutions              +0.009 (-0.000 to +0.024)  3/4    silent months +0.023 (+0.001 to +0.048)  3/4
+Institutional levels, for reference
+  added to the working model                   +0.018 (-0.010 to +0.058)  3/4    silent months +0.066 (-0.014 to +0.165)  3/4
+
+4. method, on the same inputs: gain of the method over logistic regression
+working model: logistic 0.882 (silent 0.762); boosting 0.858 (0.751); mean of the two 0.874 (0.753)
+  boosting minus logistic                      -0.024 (-0.042 to -0.001)  1/4    silent months -0.011 (-0.055 to +0.033)  1/4
+  mean of the two minus logistic               -0.008 (-0.018 to +0.004)  0/4    silent months -0.009 (-0.030 to +0.014)  1/4
+working + institutions + neighbours: logistic 0.914 (silent 0.860); boosting 0.908 (0.861); mean of the two 0.920 (0.876)
+  boosting minus logistic                      -0.006 (-0.022 to +0.016)  1/4    silent months +0.001 (-0.045 to +0.046)  2/4
+  mean of the two minus logistic               +0.006 (-0.004 to +0.022)  3/4    silent months +0.016 (-0.010 to +0.045)  3/4
+all twelve groups: logistic 0.887 (silent 0.854); boosting 0.916 (0.874); mean of the two 0.923 (0.885)
+  boosting minus logistic                      +0.029 (+0.002 to +0.066)  3/4    silent months +0.020 (-0.017 to +0.068)  3/4
+  mean of the two minus logistic               +0.036 (+0.011 to +0.069)  4/4    silent months +0.031 (+0.004 to +0.062)  3/4
+
+5. forward selection inside the fitting years (check = last five fitting years; stop when the gain is under 0.002)
+  window 2006-2010: chosen Institutional levels; State-based deaths, recent months   inner AUC 0.908   test AUC 0.868
+  window 2011-2015: chosen Deaths in neighbouring countries; Other deaths (non-state, one-sided); Military burden; ACLED demonstrations   inner AUC 0.942   test AUC 0.876
+  window 2016-2020: chosen Deaths in neighbouring countries; State-based deaths, recent months; ACLED violent events and fatalities; Military burden; ACLED demonstrations   inner AUC 0.922   test AUC 0.952
+  window 2021-2025: chosen State-based deaths, recent months; Deaths in neighbouring countries; ACLED violent events and fatalities   inner AUC 0.980   test AUC 0.897
+  selected model: all 0.898   silent 0.847
+  selected model minus the working model       +0.016 (-0.010 to +0.045)  3/4    silent months +0.086 (+0.037 to +0.131)  3/4
+  all twelve groups minus the working model    +0.005 (-0.040 to +0.049)  2/4    silent months +0.092 (+0.009 to +0.171)  3/4
+
+where the remaining error sits: onsets in the test windows, split by whether the country was silent
+  window 1: onset country-months 228, silent 142; AUC working model 0.879, silent only 0.839, not silent 0.846
+  window 2: onset country-months 243, silent 103; AUC working model 0.853, silent only 0.717, not silent 0.604
+  window 3: onset country-months 192, silent 45; AUC working model 0.907, silent only 0.655, not silent 0.818
+  window 4: onset country-months 165, silent 81; AUC working model 0.889, silent only 0.836, not silent 0.741
+
+6. neighbours added to the regression of Table D.9 (monthly_observer.py, model L2: conflict history, rule of law, electoral democracy, UCDP monthly deaths)
+horizon  3 months: Table D.9 regression 0.940 (silent 0.863); with neighbours 0.939 (0.865), by window 0.936 0.936 0.973 0.910; mean with boosting 0.941 (0.873)
+  neighbours added                             -0.001 (-0.012 to +0.011)  1/4    silent months +0.003 (-0.039 to +0.039)  1/4
+  mean with boosting minus logistic            +0.002 (-0.010 to +0.013)  3/4    silent months +0.008 (-0.024 to +0.057)  3/4
+horizon  6 months: Table D.9 regression 0.925 (silent 0.858); with neighbours 0.930 (0.872), by window 0.928 0.922 0.965 0.905; mean with boosting 0.931 (0.877)
+  neighbours added                             +0.005 (-0.005 to +0.019)  2/4    silent months +0.014 (-0.019 to +0.048)  3/4
+  mean with boosting minus logistic            +0.001 (-0.008 to +0.012)  3/4    silent months +0.006 (-0.015 to +0.032)  3/4
+horizon 12 months: Table D.9 regression 0.913 (silent 0.854); with neighbours 0.925 (0.886), by window 0.920 0.914 0.957 0.910; mean with boosting 0.924 (0.885)
+  neighbours added                             +0.012 (+0.000 to +0.027)  4/4    silent months +0.032 (+0.005 to +0.070)  4/4
+  mean with boosting minus logistic            -0.001 (-0.013 to +0.007)  2/4    silent months -0.001 (-0.021 to +0.018)  2/4
+  top tenth, L2: 3934 country-months hold 539 of 828 onset months (65%); one flagged month in 7.3 is followed by an onset
+  top tenth, L2+nb: 3932 country-months hold 548 of 828 onset months (66%); one flagged month in 7.2 is followed by an onset

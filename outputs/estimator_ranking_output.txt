@@ -1,0 +1,24 @@
+Onsets per window: [18, 20, 9, 11]  escalations to war per window: [7, 8, 7, 12]
+rank estimator                                                  mean onset AUC  2006-10 2011-15 2016-20 2021-24   top tenth  mean war AUC  top tenth
+1    Ensemble (mean rank of all estimators)                              0.911    0.880   0.914   0.908   0.942    38 of 58         0.942   28 of 34
+2    Tobit Kalman filter                                                 0.904    0.885   0.891   0.897   0.941    37 of 58         0.939   29 of 34
+3    Neural network (feed-forward)                                       0.901    0.840   0.919   0.908   0.935    36 of 58         0.930   27 of 34
+4    Kalman filter                                                       0.900    0.880   0.885   0.896   0.937    35 of 58         0.939   28 of 34
+5    Random forest                                                       0.895    0.818   0.895   0.929   0.938    33 of 58         0.931   27 of 34
+6    Logistic, same inputs as the filters                                0.894    0.869   0.896   0.878   0.934    35 of 58         0.941   27 of 34
+7    Radial-basis-function network                                       0.893    0.843   0.899   0.885   0.947    34 of 58         0.938   28 of 34
+8    Recurrent high-order neural network                                 0.892    0.841   0.896   0.885   0.947    33 of 58         0.939   28 of 34
+9    Echo state network                                                  0.892    0.835   0.897   0.890   0.945    35 of 58         0.944   28 of 34
+10   Hurdle model                                                        0.891    0.852   0.905   0.869   0.937    38 of 58         0.942   28 of 34
+11   Gradient boosting                                                   0.887    0.808   0.914   0.897   0.929    34 of 58         0.938   28 of 34
+12   Particle filter (censored likelihood)                               0.884    0.867   0.864   0.875   0.930    35 of 58         0.909   29 of 34
+13   Hidden Markov model, three regimes                                  0.877    0.848   0.865   0.902   0.892    35 of 58         0.911   27 of 34
+14   Unscented Kalman filter                                             0.872    0.884   0.866   0.857   0.881    32 of 58         0.934   29 of 34
+15   Logistic, history and recorded deaths below the threshold           0.864    0.844   0.856   0.837   0.917    36 of 58         0.914   27 of 34
+16   Wavelet preprocessing + RBF network                                 0.853    0.732   0.872   0.851   0.956    33 of 58         0.937   28 of 34
+17   Extended Kalman filter                                              0.850    0.883   0.838   0.842   0.839    30 of 58         0.930   26 of 34
+18   Recurrent network (GRU)                                             0.816    0.674   0.853   0.821   0.916    32 of 58         0.902   25 of 34
+19   Logistic, conflict history (baseline)                               0.811    0.814   0.796   0.801   0.834    26 of 58         0.914   27 of 34
+20   Markov chain on death bands                                         0.765    0.694   0.777   0.811   0.781    33 of 58         0.858   22 of 34
+
+Estimators within 0.02 of the best mean onset AUC (0.911): Ensemble (mean rank of all estimators); Tobit Kalman filter; Neural network (feed-forward); Kalman filter; Random forest; Logistic, same inputs as the filters; Radial-basis-function network; Recurrent high-order neural network; Echo state network

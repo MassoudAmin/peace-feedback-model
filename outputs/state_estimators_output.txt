@@ -1,0 +1,74 @@
+countries 199, years 1991-2024, share of country-years with zero recorded deaths 0.80
+
+== State-space parameters (quasi-maximum likelihood on 1991-2020, censored likelihood)
+persistence phi 0.80 per year; process variance q 5.10; measurement variance r 0.58
+level mu = -5.12 -3.05*log(1+years since conflict) -0.07*log(1+conflict years) -0.98*rule of law -0.80*electoral democracy   (standardized inputs)
+
+== Held-out test: fit on rows through 2020; test rows 2021-2024, outcomes 2022-2025
+estimator                                                   onset AUC   95% interval  top tenth   gain over baseline (95%)  war AUC  top tenth
+Logistic, conflict history (baseline)                           0.834      0.68-0.96    7 of 11                               0.965   11 of 12
+Logistic, same inputs as the filters                            0.934      0.89-0.98    8 of 11    +0.100 (-0.00 to +0.24)    0.965   11 of 12
+Logistic, history and recorded deaths below the threshold       0.917      0.84-0.97    8 of 11    +0.083 (-0.02 to +0.22)    0.965   11 of 12
+Kalman filter                                                   0.937      0.89-0.98    9 of 11    +0.103 (-0.00 to +0.23)    0.964   11 of 12
+Extended Kalman filter                                          0.839      0.68-0.97    7 of 11    +0.004 (-0.04 to +0.05)    0.950   10 of 12
+Unscented Kalman filter                                         0.881      0.75-0.97    7 of 11    +0.047 (-0.03 to +0.17)    0.966   12 of 12
+Tobit Kalman filter                                             0.941      0.89-0.98    8 of 11    +0.107 (-0.00 to +0.25)    0.972   12 of 12
+Particle filter (censored likelihood)                           0.930      0.88-0.98    8 of 11    +0.095 (-0.02 to +0.24)    0.964   12 of 12
+Hidden Markov model, three regimes                              0.892      0.76-0.98    8 of 11    +0.058 (-0.08 to +0.22)    0.964   11 of 12
+Gradient boosting                                               0.929      0.88-0.97    7 of 11    +0.095 (-0.02 to +0.24)    0.962   11 of 12
+Neural network (feed-forward)                                   0.935      0.89-0.97    8 of 11    +0.101 (-0.02 to +0.25)    0.951   11 of 12
+Radial-basis-function network                                   0.947      0.91-0.98    8 of 11    +0.113 (-0.00 to +0.26)    0.971   12 of 12
+Wavelet preprocessing + RBF network                             0.956      0.92-0.98    9 of 11    +0.121 (+0.01 to +0.26)    0.964   11 of 12
+Recurrent high-order neural network                             0.947      0.91-0.98    8 of 11    +0.112 (-0.00 to +0.26)    0.967   12 of 12
+Echo state network                                              0.945      0.90-0.98    9 of 11    +0.111 (-0.01 to +0.25)    0.966   12 of 12
+Random forest                                                   0.938      0.90-0.97    7 of 11    +0.104 (-0.01 to +0.25)    0.962   11 of 12
+Hurdle model                                                    0.937      0.87-0.98    9 of 11    +0.103 (-0.00 to +0.25)    0.966   12 of 12
+Markov chain on death bands                                     0.781      0.62-0.93    7 of 11    -0.054 (-0.26 to +0.17)    0.946   10 of 12
+Recurrent network (GRU)                                         0.916      0.83-0.98    8 of 11    +0.081 (-0.01 to +0.19)    0.962   10 of 12
+Ensemble (mean rank of all estimators)                          0.942      0.90-0.98    9 of 11    +0.108 (+0.00 to +0.24)    0.969   12 of 12
+test rows: onset 645 with 11 onsets; war 746 with 12 escalations
+at-risk test rows with some recorded deaths below the threshold in t or t-1: 60 of 645; onsets among them 7 of 11
+same, fit rows: 305 of 4914; onsets among them 52 of 103
+
+== Onsets from recorded silence (zero recorded deaths in the year and the year before), test rows
+Logistic, conflict history (baseline)    AUC 0.886   (4 onsets in 585 rows)
+Logistic, same inputs as the filters     AUC 0.934   (4 onsets in 585 rows)
+Logistic, history and recorded deaths below the threshold AUC 0.890   (4 onsets in 585 rows)
+Kalman filter                            AUC 0.942   (4 onsets in 585 rows)
+Extended Kalman filter                   AUC 0.941   (4 onsets in 585 rows)
+Unscented Kalman filter                  AUC 0.943   (4 onsets in 585 rows)
+Tobit Kalman filter                      AUC 0.943   (4 onsets in 585 rows)
+Particle filter (censored likelihood)    AUC 0.919   (4 onsets in 585 rows)
+Hidden Markov model, three regimes       AUC 0.795   (4 onsets in 585 rows)
+Gradient boosting                        AUC 0.934   (4 onsets in 585 rows)
+Neural network (feed-forward)            AUC 0.978   (4 onsets in 585 rows)
+Radial-basis-function network            AUC 0.969   (4 onsets in 585 rows)
+Wavelet preprocessing + RBF network      AUC 0.971   (4 onsets in 585 rows)
+Recurrent high-order neural network      AUC 0.957   (4 onsets in 585 rows)
+Echo state network                       AUC 0.968   (4 onsets in 585 rows)
+Random forest                            AUC 0.950   (4 onsets in 585 rows)
+Hurdle model                             AUC 0.931   (4 onsets in 585 rows)
+Markov chain on death bands              AUC 0.500   (4 onsets in 585 rows)
+Recurrent network (GRU)                  AUC 0.973   (4 onsets in 585 rows)
+Ensemble (mean rank of all estimators)   AUC 0.965   (4 onsets in 585 rows)
+
+== One-year-ahead prediction of log(1 + deaths), test rows 2021-2023 (target years 2022-2024), all countries
+persistence (next year = this year)      RMSE 0.941
+Kalman filter                            RMSE 1.018
+Extended Kalman filter                   RMSE 1.121
+Unscented Kalman filter                  RMSE 1.015
+Tobit Kalman filter                      RMSE 0.963
+Particle filter (censored likelihood)    RMSE 0.973
+Hidden Markov model, three regimes       RMSE 1.090
+Gradient boosting                        RMSE 0.919
+Hurdle model                             RMSE 0.925
+
+== Known-truth test: data simulated from the fitted state-space model, 20 replications
+RMSE of the filtered latent state against the true state; "silent" = years with no recorded deaths
+Kalman filter                            RMSE all years 7.024   silent years 7.790   AUC for onset from silence 0.890
+Extended Kalman filter                   RMSE all years 3.342   silent years 3.416   AUC for onset from silence 0.890
+Unscented Kalman filter                  RMSE all years 3.126   silent years 3.260   AUC for onset from silence 0.897
+Tobit Kalman filter                      RMSE all years 2.955   silent years 3.185   AUC for onset from silence 0.902
+Particle filter (censored likelihood)    RMSE all years 2.855   silent years 3.149   AUC for onset from silence 0.880
+true state known (ceiling)                                                               AUC for onset from silence 0.952
+prior standard deviation of the latent state: 3.762

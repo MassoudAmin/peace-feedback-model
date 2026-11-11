@@ -5,7 +5,7 @@ Download each file into this directory under the name shown. Nothing here is red
 | File expected in `data/` | Source | Used by |
 |---|---|---|
 | `OrganizedViolenceCYDataSet26_1.csv` | UCDP Organized Violence Country-Year Dataset 26.1, ucdp.uu.se/downloads | fit1, predict, tone |
-| `GEDEvent_v26_1.csv` | UCDP Georeferenced Event Dataset 26.1, ucdp.uu.se/downloads | fit2, food2, food3, tone2, pair, trust, loops4, silence_sensitivity, acled_second_record |
+| `GEDEvent_v26_1.csv` | UCDP Georeferenced Event Dataset 26.1, ucdp.uu.se/downloads | fit2, food2, food3, tone2, pair, trust, loops4, silence_sensitivity, acled_second_record, monthly_panel |
 | `UcdpPrioConflict_v26_1.csv` | UCDP/PRIO Armed Conflict Dataset 26.1, ucdp.uu.se/downloads | fit3 |
 | `Dyadic_v26_1.csv` and `Dyadic_v26_1.xlsx` | UCDP Dyadic Dataset 26.1 (the csv for pair.py, the xlsx for the family tests) | pair, ucdp_family_tests, ucdp_family_tests2 |
 | `BattleDeaths_v26_1.xlsx` | UCDP Battle-Related Deaths Dataset 26.1, dyadic | ucdp_family_tests, ucdp_family_tests2 |
@@ -26,7 +26,9 @@ Download each file into this directory under the name shown. Nothing here is red
 | `wfp_food_prices_global_YYYY.csv` (one per year) | WFP Global Food Prices, data.humdata.org | food |
 | `events.YYYY.tab` or `events_YYYY.tsv` (one per year) | ICEWS event data, dataverse.harvard.edu | tone, tone2 |
 | `WVS_Cross-National_Wave_7_inverted_csv_v6_0.csv` | World Values Survey wave 7, cross-national file v6.0 (registration required) | trust |
-| `acled/*aggregated*.xlsx` | ACLED regional weekly aggregates, exported October 10-17, 2026 (registered account required) | acled_second_record |
+| `acled/*aggregated*.xlsx` | ACLED regional weekly aggregates (registered account required): exported October 10-17, 2026 for acled_second_record; to the week of October 31, 2026 for monthly_panel | acled_second_record, monthly_panel |
+| `GEDEvent_v26_01_26_09.csv` | UCDP Candidate Events Dataset, January-September 2026 (version 26.01.26.09), ucdp.uu.se/downloads | monthly_panel |
+| `rtfp/WLD_RTFP_country_2026-11-02.csv` | World Bank Real Time Food Prices, monthly food price inflation by country, microdata.worldbank.org/catalog/4509 | monthly_panel |
 | `adjacency.csv` | Land-border pairs, two columns `country_a`, `country_b`, in UCDP country names | loops4 |
 
 Two notes.

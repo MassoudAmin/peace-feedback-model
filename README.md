@@ -1,6 +1,6 @@
 # Peace as a Coupled Feedback System — replication package
 
-Version 2.2, November 11, 2026. Companion to Chapter 11 and Appendix D of S. Massoud Amin, *The Coupled World* (manuscript, 2026), and to the paper "Peace as a Coupled Feedback System" (manuscript, September 2026).
+Version 2.5, November 11, 2026. Companion to Chapter 11 and Appendix D of S. Massoud Amin, *The Coupled World* (manuscript, 2026), and to the paper "The Feedback Dynamics of Peace: Loops, Thresholds, and Conflict Onset" (manuscript, November 2026).
 
 Everything here is public. The derived panels are shipped, so the yearly results can be checked without downloading any source data. The remaining results need the public source files listed in `data/README.md`.
 
@@ -22,6 +22,10 @@ python3 code/table_11_2_from_panels.py
 python3 code/trust_pair_from_panels.py
 python3 code/trust_forecast_check.py
 python3 code/peace_game.py
+python3 code/state_estimators.py
+python3 code/estimator_ranking.py
+python3 code/monthly_panel.py      # needs the source files listed in data/README.md
+python3 code/monthly_observer.py   # about twenty minutes
 python3 code/fig4.py
 ```
 
@@ -31,6 +35,10 @@ python3 code/fig4.py
 | `trust_pair_from_panels.py` | `panels/panel2.csv`, `wvs7_country_measures_weighted.csv`, `pair_year_panel.csv` | Table 11.3; Table 11.4; the trust rank correlation of Figure 11.3; the pair escalation ladder, pair escalation AUC, and reciprocity coefficients |
 | `trust_forecast_check.py` | `panels/panel2.csv`, `wvs7_country_measures_weighted.csv` | the held-out check of Chapter 11 on whether trust and its product with rule of law improve the yearly onset forecast |
 | `peace_game.py` | none | the laboratory game of Chapter 11 and Appendix D (Table D.6), run with simulated teams; illustrative coefficients, no data files |
+| `state_estimators.py` | `panels/panel2.csv` | sixteen state estimators for the violence state (Kalman, extended, unscented and Tobit Kalman filters, particle filter, hidden Markov model, Markov chain, hurdle model, gradient boosting, random forest, feed-forward, radial-basis-function, wavelet + RBF, recurrent high-order, echo state and gated recurrent networks), their ensemble, three logistic baselines, and a known-truth test, for one test window (the gated recurrent network needs PyTorch and is skipped without it) |
+| `estimator_ranking.py` | `panels/panel2.csv` | runs `state_estimators.py` on four rolling test windows and ranks the estimators (Table D.8, Figure D.2) |
+| `monthly_panel.py` | UCDP GED 26.1 and Candidate Events (January-September 2026), ACLED weekly aggregates, World Bank Real Time Food Prices, `panels/panel2.csv` | builds the country-month panel `panels/monthly_panel.csv`, January 1989 to September 2026 (the panel is not shipped: it contains counts derived from ACLED, whose terms govern redistribution) |
+| `monthly_observer.py` | `panels/monthly_panel.csv` | a monthly Tobit Kalman filter with one, three and six sensors, three logistic regressions and gradient boosting, on four rolling test windows and horizons of 3, 6 and 12 months (Table D.9; Chapter 15, open problem 11) |
 | `fig4.py` | `panels/testwars_rank.csv`, `rank2026.csv` | the test-war ranks and the 2026 ranking |
 | `fig2.py`, `fig_loops.py`, `peace_eq2.py` | nothing | the control-loop, causal-loop, and equation-sheet figures (the equation sheet carries the paper's numbering; the book numbers the same conditions (11.1) to (11.5)) |
 

@@ -1,6 +1,6 @@
 # Peace as a Coupled Feedback System — replication package
 
-Version 2.7, November 11, 2026. Companion to Chapter 11 and Appendix D of S. Massoud Amin, *The Coupled World* (manuscript, 2026), and to the paper "The Feedback Dynamics of Peace: Loops, Thresholds, and Conflict Onset" (manuscript, November 2026).
+Version 2.8, November 11, 2026. Companion to Chapter 11 and Appendix D of S. Massoud Amin, *The Coupled World* (manuscript, 2026), and to the paper "The Feedback Dynamics of Peace: Loops, Thresholds, and Conflict Onset" (manuscript, November 2026).
 
 Everything here is public. The derived panels are shipped, so the yearly results can be checked without downloading any source data. The remaining results need the public source files listed in `data/README.md`.
 
@@ -29,21 +29,25 @@ python3 code/monthly_observer.py   # about twenty minutes
 python3 code/precursor_ranking.py  # about one minute
 python3 code/precursor_pathways.py # about six minutes
 python3 code/within_country.py     # about three minutes
+python3 code/peace_simulation.py   # about fifteen seconds, no data needed
+python3 code/reserve_trust_test.py  # about three minutes
 python3 code/fig4.py
 ```
 
 | Script | Reads | Reproduces in the book |
 |---|---|---|
 | `table_11_2_from_panels.py` | `panels/panel2.csv` | Table 11.2; Table D.2; the held-out checks of Chapter 11 and Appendix D (base rate, Brier score, calibration by thirds, top-tenth capture, bootstrap by country, permutation test, escalation baseline) |
-| `trust_pair_from_panels.py` | `panels/panel2.csv`, `wvs7_country_measures_weighted.csv`, `pair_year_panel.csv` | Table 11.3; Table 11.4; the trust rank correlation of Figure 11.3; the pair escalation ladder, pair escalation AUC, and reciprocity coefficients |
+| `trust_pair_from_panels.py` | `panels/panel2.csv`, `wvs7_country_measures_weighted.csv`, `pair_year_panel.csv` | Tables D.11 and D.12 (formerly 11.3 and 11.4); the trust rank correlation of Figure 11.3; the pair escalation ladder, pair escalation AUC, and reciprocity coefficients |
 | `trust_forecast_check.py` | `panels/panel2.csv`, `wvs7_country_measures_weighted.csv` | the held-out check of Chapter 11 on whether trust and its product with rule of law improve the yearly onset forecast |
 | `peace_game.py` | none | the laboratory game of Chapter 11 and Appendix D (Table D.6), run with simulated teams; illustrative coefficients, no data files |
+| `peace_simulation.py` | none | simulates the reduced model on each side of the four stability conditions, sweeps trust against two analytic thresholds, and tests the conditions and a reserve balance over 3,000 parameter sets; coefficients are illustrative (Figure 11.5; paper Figure 7; Appendix D). Writes `outputs/peace_simulation_series.npz`, from which the figure is drawn |
+| `reserve_trust_test.py` | `panels/monthly_panel.csv`, `panels/panel4.csv`, `panels/wvs7_country_measures_weighted.csv`, `panels/wvs7_regions.csv`, `panels/fiscal_space.csv` | tests on the record the pattern the simulation predicts (more onsets where containment capacity is low and reserves are thin), by trust and reserves, by rule of law and reserves, and by region, for each kind of violence, with foreign-exchange reserves and with four measures of fiscal room; the pattern is not found (Chapter 11; Appendix D; paper Section 6.12) |
 | `state_estimators.py` | `panels/panel2.csv` | sixteen state estimators for the violence state (Kalman, extended, unscented and Tobit Kalman filters, particle filter, hidden Markov model, Markov chain, hurdle model, gradient boosting, random forest, feed-forward, radial-basis-function, wavelet + RBF, recurrent high-order, echo state and gated recurrent networks), their ensemble, three logistic baselines, and a known-truth test, for one test window (the gated recurrent network needs PyTorch and is skipped without it) |
 | `estimator_ranking.py` | `panels/panel2.csv` | runs `state_estimators.py` on four rolling test windows and ranks the estimators (Table D.8, Figure D.2) |
 | `monthly_panel.py` | UCDP GED 26.1 and Candidate Events (January-September 2026), ACLED weekly aggregates, World Bank Real Time Food Prices, `panels/panel2.csv` | builds the country-month panel `panels/monthly_panel.csv`, January 1989 to September 2026 (the panel is not shipped: it contains counts derived from ACLED, whose terms govern redistribution) |
 | `monthly_observer.py` | `panels/monthly_panel.csv` | a monthly Tobit Kalman filter with one, three and six sensors, three logistic regressions and gradient boosting, on four rolling test windows and horizons of 3, 6 and 12 months (Table D.9; Chapter 15, open problem 11) |
-| `precursor_ranking.py` | `panels/monthly_panel.csv`, `panels/panel2.csv`, `panels/tone_all.csv` | ranks ten groups of precursors by their out-of-sample gain over conflict history, with bootstrap intervals, and tests whether the fitted relation changes over time (Table 11.6; Appendix D) |
-| `precursor_pathways.py` | `panels/monthly_panel.csv`, `panels/panel2.csv`, `panels/borders.csv`, `panels/country_size.csv`, `data/iom_dtm_admin0.csv` | tests five ways to raise the forecast: deaths in countries across a land border, IOM displacement counts, country size, gradient boosting, and input selection inside the fitting years; adds the neighbour input to the regression of Table D.9 at 3, 6 and 12 months (Tables 11.6 and D.9; Appendix D) |
+| `precursor_ranking.py` | `panels/monthly_panel.csv`, `panels/panel2.csv`, `panels/tone_all.csv` | ranks ten groups of precursors by their out-of-sample gain over conflict history, with bootstrap intervals, and tests whether the fitted relation changes over time (Table D.13; Appendix D) |
+| `precursor_pathways.py` | `panels/monthly_panel.csv`, `panels/panel2.csv`, `panels/borders.csv`, `panels/country_size.csv`, `data/iom_dtm_admin0.csv` | tests five ways to raise the forecast: deaths in countries across a land border, IOM displacement counts, country size, gradient boosting, and input selection inside the fitting years; adds the neighbour input to the regression of Table D.9 at 3, 6 and 12 months (Tables D.13 and D.9; Appendix D) |
 | `within_country.py` | `panels/monthly_panel.csv`, `panels/borders.csv`, the two UCDP GED event files | runs the forecast for each UCDP kind of violence (state-based, non-state, one-sided) by country, and for provinces (first-level administrative areas) with the three kinds summed (Table D.10) |
 | `fig4.py` | `panels/testwars_rank.csv`, `rank2026.csv` | the test-war ranks and the 2026 ranking |
 | `fig2.py`, `fig_loops.py`, `peace_eq2.py` | nothing | the control-loop, causal-loop, and equation-sheet figures (the equation sheet carries the paper's numbering; the book numbers the same conditions (11.1) to (11.5)) |
@@ -58,7 +62,7 @@ Their recorded output is in `outputs/`.
 | `fit3.py` | `panels/panel.csv`, V-Dem, UCDP/PRIO | `panels/panel2.csv` | Table 11.2 (the original fit) |
 | `fit2.py` | UCDP GED, FAO index | prints | Table 11.1, country-month columns; the count of eleven silent onsets in nineteen |
 | `pair.py` | UCDP GED, UCDP Dyadic | `panels/pair_year_panel.csv` | Table 11.1, pair-month columns; pair escalation; reciprocity; the interstate subset |
-| `trust.py` | WVS wave 7, UCDP GED, `panels/panel2.csv` | `panels/wvs7_country_measures_weighted.csv`, `wvs7_regions.csv` | Tables 11.3 and 11.4; Figures 11.3 and 11.4; the regional test |
+| `trust.py` | WVS wave 7, UCDP GED, `panels/panel2.csv` | `panels/wvs7_country_measures_weighted.csv`, `wvs7_regions.csv` | Tables D.11 and D.12; Figures D.3 and 11.3; the regional test |
 | `loops4.py` | World Bank indicators, UCDP GED, `adjacency.csv`, `panels/panel2.csv` | `panels/panel_loops.csv` | youth share, contagion, population growth, drought |
 | `food.py`, `food2.py`, `food3.py` | WFP prices, World Bank inflation, UCDP GED | `panels/staple_chg.csv`, `panel3.csv` | food-price tests |
 | `res.py` | World Bank reserves, `panels/panel3.csv` | `panels/panel4.csv` | reserves and the buffer interaction |
@@ -75,7 +79,7 @@ No fitted model objects are stored. Each script refits when it is run.
 
 ## What has been checked, and what has not
 
-On November 10, 2026, in a fresh environment, every script was compiled, and the scripts that run from the shipped panels were run. They reproduce Table 11.2 exactly, Table D.2 to within 0.01, and the counts of Tables 11.3 and 11.4. The scripts that need source files were run on those files when the results were first produced (September and October 2026), and their recorded output is in `outputs/`. For this release the input file names in those scripts were made uniform and matched to `data/README.md`; they have not been rerun against the source files since that change. A rebuild of the panels from the source files by a second party is the independent test that remains.
+On November 10, 2026, in a fresh environment, every script was compiled, and the scripts that run from the shipped panels were run. They reproduce Table 11.2 exactly, Table D.2 to within 0.01, and the counts of Tables D.11 and D.12. The scripts that need source files were run on those files when the results were first produced (September and October 2026), and their recorded output is in `outputs/`. For this release the input file names in those scripts were made uniform and matched to `data/README.md`; they have not been rerun against the source files since that change. A rebuild of the panels from the source files by a second party is the independent test that remains.
 
 ## Definitions
 
@@ -90,3 +94,7 @@ Monthly (`fit2.py`): the first month with at least 25 state-based battle deaths 
 ## Added in version 2.7
 
 `panels/borders.csv` lists 320 pairs of countries that share a land border, and `panels/country_size.csv` gives one population and one area per country. Both come from the country list of the `countryinfo` Python package, version 1.0.1, with Kosovo added by hand. `data/iom_dtm_admin0.csv` is not shipped. To build it, download the IOM Displacement Tracking Matrix file (admin 0 to 2, from the DTM API), keep the rows with `adminLevel` 0, and sum `numPresentIdpInd` by `admin0Name`, `yearReportingDate`, `monthReportingDate` and `reportingDate` into a column `idp`. Without the file `precursor_pathways.py` skips the displacement test.
+
+## Added in version 2.8
+
+`panels/fiscal_space.csv` holds four indicators (government debt and fiscal balance as shares of GDP, government debt as a share of average tax revenues, and the sovereign rating) for the panel countries, 1990 to 2024, taken from the World Bank Cross-Country Database of Fiscal Space, Fall 2025 version (https://www.worldbank.org/en/research/brief/fiscal-space). Cite: Kose, M. A., S. Kurlat, F. Ohnsorge, and N. Sugawara. 2022. "A Cross-Country Database of Fiscal Space." Journal of International Money and Finance 128: 102682.

@@ -1,0 +1,60 @@
+1. Behavior over time: 500 plays on each side of each condition; failure share and the median at rounds 10, 30, 60
+  trust (revenge loop)   stable   {'p': {'T': 0.6}}                                          failure share 0.00; median V at rounds 10/30/60: 0.34 0.40 0.40; conditions arms/fear/revenge/delay/budget: YYYYY
+  trust (revenge loop)   unstable {'p': {'T': 0.2}}                                          failure share 0.98; median V at rounds 10/30/60: 1.41 2.57 8.07; conditions arms/fear/revenge/delay/budget: YYYYn
+  transparency (fear)    stable   {'chi': 0.9}                                               failure share 0.00; median F at rounds 10/30/60: 0.60 0.56 0.58; conditions arms/fear/revenge/delay/budget: YYYYY
+  transparency (fear)    unstable {'chi': 0.2}                                               failure share 0.98; median F at rounds 10/30/60: 1.45 4.92 12.96; conditions arms/fear/revenge/delay/budget: YnYYY
+  arms reaction          stable   {'rule': {'k_arm': 0.1}}                                   failure share 0.00; median A at rounds 10/30/60: 0.01 0.03 0.03; conditions arms/fear/revenge/delay/budget: YYYYY
+  arms reaction          unstable {'rule': {'k_arm': 0.45}}                                  failure share 0.64; median A at rounds 10/30/60: 0.09 1.30 0.34; conditions arms/fear/revenge/delay/budget: nYYYY
+  total delay            stable   {'rule': {'tau_a': 1}, 'tau_d': 1}                         failure share 0.00; median V at rounds 10/30/60: 0.34 0.40 0.40; conditions arms/fear/revenge/delay/budget: YYYYY
+  total delay            unstable {'rule': {'tau_a': 5}, 'tau_d': 3}                         failure share 0.32; median V at rounds 10/30/60: 2.06 0.74 1.18; conditions arms/fear/revenge/delay/budget: YYYnY
+
+2. Failure share against trust (transparency 0.9, 1,000 plays each)
+   analytic thresholds: enforcement ceiling T > 0.135; budget T > 0.325
+   trust 0.05: failure share 1.00; median reserve at the end 9.2
+   trust 0.10: failure share 1.00; median reserve at the end 1.3
+   trust 0.15: failure share 1.00; median reserve at the end 0.0
+   trust 0.20: failure share 0.99; median reserve at the end 0.0
+   trust 0.25: failure share 0.97; median reserve at the end 0.0
+   trust 0.30: failure share 0.77; median reserve at the end 0.3
+   trust 0.35: failure share 0.32; median reserve at the end 1.6
+   trust 0.40: failure share 0.06; median reserve at the end 6.4
+   trust 0.45: failure share 0.01; median reserve at the end 10.6
+   trust 0.50: failure share 0.00; median reserve at the end 13.9
+   trust 0.55: failure share 0.00; median reserve at the end 16.8
+   trust 0.60: failure share 0.00; median reserve at the end 19.1
+   trust 0.65: failure share 0.00; median reserve at the end 21.1
+   trust 0.70: failure share 0.00; median reserve at the end 22.8
+   trust 0.75: failure share 0.00; median reserve at the end 24.3
+   trust 0.80: failure share 0.00; median reserve at the end 25.6
+   trust 0.85: failure share 0.00; median reserve at the end 26.7
+   trust 0.90: failure share 0.00; median reserve at the end 27.6
+
+3. Sensitivity: 3,000 parameter sets, 40 plays each
+   mean failure share over all sets 0.768; sets that fail in most plays 0.777
+   by number of the four conditions violated:   sets   mean failure share   share of sets failing in most plays
+     0 violated:   384   0.510   0.521
+     1 violated:  1264   0.690   0.699
+     2 violated:  1067   0.892   0.903
+     3 violated:   268   0.998   1.000
+     4 violated:    17   1.000   1.000
+   all four met: 384 sets, mean failure share 0.510; with the budget condition also met: 286 sets, 0.357; four met and budget violated: 98 sets, 0.957
+   each condition alone: mean failure share when met / when violated, and share of sets where it is violated
+     arms race     0.705 / 0.848   violated in 0.44
+     fear loop     0.709 / 0.989   violated in 0.21
+     revenge loop  0.752 / 1.000   violated in 0.06
+     delay         0.677 / 0.805   violated in 0.71
+     budget        0.659 / 0.984   violated in 0.34
+   AUC for "fails in most plays": number of the four violated 0.727; with the budget condition as a fifth 0.811
+   logistic on the four conditions, fitted on half the sets and scored on the other half: AUC 0.771; weights +0.89 +3.58 +2.53 +0.45
+   logistic on the five conditions, fitted on half the sets and scored on the other half: AUC 0.872; weights +1.00 +3.74 +0.71 +0.41 +3.49
+
+   the reserve balance at the operating point of the coupled model (one inequality in place of four)
+   balance positive: 610 sets, mean failure share 0.252; balance negative or no operating point: 2390 sets, 0.900
+   AUC of the balance for "fails in most plays": 0.849
+   five conditions met and balance positive: 190 sets, 0.171; five met and balance negative: 96 sets, 0.725
+   failure share by size of the positive balance (base replenishment is 0.6 a round):
+     0.0 to 0.1:  106 sets   0.497
+     0.1 to 0.2:  131 sets   0.395
+     0.2 to 0.3:  110 sets   0.223
+     0.3 to 0.5:  176 sets   0.125
+     0.5 to 9.0:   87 sets   0.033

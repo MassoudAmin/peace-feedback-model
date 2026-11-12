@@ -1,0 +1,98 @@
+1. Trust and reserves: 47 surveyed countries with a reserves figure, predictor years 2020-2024; trust split at its median (14.6 percent), reserves at three months of imports
+   state-based: onsets / country-years at risk, rate (exact 95% interval)
+     trust low          reserves low     0 of   16    0.0%  (0.0 to 20.6)
+     trust low          reserves high    3 of   46    6.5%  (1.4 to 17.9)
+     trust high         reserves low     0 of   36    0.0%  (0.0 to 9.7)
+     trust high         reserves high    0 of   59    0.0%  (0.0 to 6.1)
+     both low against the other three cells: 0.0% against 2.1%; Fisher exact p = 1.000
+     both low against the two cells with only one low: 0.0% against 3.7%; Fisher exact p = 1.000
+   non-state (communal, sectarian, militia): onsets / country-years at risk, rate (exact 95% interval)
+     trust low          reserves low     0 of   15    0.0%  (0.0 to 21.8)
+     trust low          reserves high    4 of   65    6.2%  (1.7 to 15.0)
+     trust high         reserves low     1 of   37    2.7%  (0.1 to 14.2)
+     trust high         reserves high    1 of   77    1.3%  (0.0 to 7.0)
+     both low against the other three cells: 0.0% against 3.4%; Fisher exact p = 1.000
+     both low against the two cells with only one low: 0.0% against 4.9%; Fisher exact p = 1.000
+   one-sided (killing of civilians): onsets / country-years at risk, rate (exact 95% interval)
+     trust low          reserves low     0 of   18    0.0%  (0.0 to 18.5)
+     trust low          reserves high    4 of   57    7.0%  (1.9 to 17.0)
+     trust high         reserves low     0 of   35    0.0%  (0.0 to 10.0)
+     trust high         reserves high    3 of   68    4.4%  (0.9 to 12.4)
+     both low against the other three cells: 0.0% against 4.4%; Fisher exact p = 1.000
+     both low against the two cells with only one low: 0.0% against 4.3%; Fisher exact p = 1.000
+   any kind: onsets / country-years at risk, rate (exact 95% interval)
+     trust low          reserves low     0 of   13    0.0%  (0.0 to 24.7)
+     trust low          reserves high    5 of   34   14.7%  (5.0 to 31.1)
+     trust high         reserves low     0 of   35    0.0%  (0.0 to 10.0)
+     trust high         reserves high    1 of   57    1.8%  (0.0 to 9.4)
+     both low against the other three cells: 0.0% against 4.8%; Fisher exact p = 1.000
+     both low against the two cells with only one low: 0.0% against 7.2%; Fisher exact p = 1.000
+
+2. Rule of law and reserves: 123 countries, 2644 country-years, 1991-2024; rule of law split at 0.5, reserves at three months of imports
+   state-based: onsets / country-years at risk, rate (exact 95% interval)
+     rule of law low    reserves low     8 of  149    5.4%  (2.3 to 10.3)
+     rule of law low    reserves high   18 of  391    4.6%  (2.8 to 7.2)
+     rule of law high   reserves low     3 of  747    0.4%  (0.1 to 1.2)
+     rule of law high   reserves high    8 of  932    0.9%  (0.4 to 1.7)
+     both low against the other three cells: 5.4% against 1.4%; Fisher exact p = 0.002
+     both low against the two cells with only one low: 5.4% against 1.8%; Fisher exact p = 0.014
+     logistic, standardized weights (95% interval, countries resampled): log reserves +0.09 (-0.49 to +0.72); rule of law x log reserves +0.05 (-0.84 to +0.86); 37 onsets
+     out of sample, four windows: adding reserves and the interaction to history and rule of law changes the mean AUC by -0.016 (-0.049 to +0.008); windows with a gain 1 of 4
+   non-state (communal, sectarian, militia): onsets / country-years at risk, rate (exact 95% interval)
+     rule of law low    reserves low     4 of  154    2.6%  (0.7 to 6.5)
+     rule of law low    reserves high   20 of  514    3.9%  (2.4 to 5.9)
+     rule of law high   reserves low     6 of  748    0.8%  (0.3 to 1.7)
+     rule of law high   reserves high   11 of  983    1.1%  (0.6 to 2.0)
+     both low against the other three cells: 2.6% against 1.6%; Fisher exact p = 0.332
+     both low against the two cells with only one low: 2.6% against 2.1%; Fisher exact p = 0.559
+     logistic, standardized weights (95% interval, countries resampled): log reserves -0.28 (-0.81 to +0.37); rule of law x log reserves +0.29 (-0.57 to +0.94); 41 onsets
+     out of sample, four windows: adding reserves and the interaction to history and rule of law changes the mean AUC by +0.001 (-0.006 to +0.011); windows with a gain 1 of 3
+   one-sided (killing of civilians): onsets / country-years at risk, rate (exact 95% interval)
+     rule of law low    reserves low     8 of  149    5.4%  (2.3 to 10.3)
+     rule of law low    reserves high   22 of  453    4.9%  (3.1 to 7.3)
+     rule of law high   reserves low     8 of  742    1.1%  (0.5 to 2.1)
+     rule of law high   reserves high   14 of  965    1.5%  (0.8 to 2.4)
+     both low against the other three cells: 5.4% against 2.0%; Fisher exact p = 0.016
+     both low against the two cells with only one low: 5.4% against 2.5%; Fisher exact p = 0.062
+     logistic, standardized weights (95% interval, countries resampled): log reserves +0.02 (-0.48 to +0.48); rule of law x log reserves -0.13 (-0.69 to +0.46); 52 onsets
+     out of sample, four windows: adding reserves and the interaction to history and rule of law changes the mean AUC by -0.007 (-0.019 to +0.008); windows with a gain 1 of 4
+   any kind: onsets / country-years at risk, rate (exact 95% interval)
+     rule of law low    reserves low     7 of  129    5.4%  (2.2 to 10.9)
+     rule of law low    reserves high   25 of  335    7.5%  (4.9 to 10.8)
+     rule of law high   reserves low    13 of  718    1.8%  (1.0 to 3.1)
+     rule of law high   reserves high   14 of  881    1.6%  (0.9 to 2.7)
+     both low against the other three cells: 5.4% against 2.7%; Fisher exact p = 0.092
+     both low against the two cells with only one low: 5.4% against 3.6%; Fisher exact p = 0.325
+     logistic, standardized weights (95% interval, countries resampled): log reserves -0.05 (-0.60 to +0.49); rule of law x log reserves -0.16 (-0.86 to +0.52); 59 onsets
+     out of sample, four windows: adding reserves and the interaction to history and rule of law changes the mean AUC by -0.049 (-0.096 to -0.008); windows with a gain 0 of 4
+
+3. Regions: 223 survey regions in 17 countries with 100 or more deaths in 2020-2025 and a reserves figure; 2 countries below three months of imports
+   reserves under three months: 13 regions in 2 countries; too few countries for a slope
+   reserves of three months or more: 210 regions in 15 countries; within-country slope of log deaths on trust (per percentage point) -0.019 (-0.059 to +0.008)
+
+4. Rule of law and fiscal room, 1991-2024; thin fiscal room is the worse half of each measure; sixteen comparisons, so about one would reach p < 0.05 by chance
+  government debt, % of GDP: 123 countries, 2576 country-years
+    state-based                                low rule of law: thin room 11 of 173 (6.4%), ample room 15 of 349 (4.3%), Fisher p 0.392; high rule of law 11 of 1643; weight on room -0.24 (-0.81 to +0.99), on rule of law x room +0.31 (-0.58 to +1.07); out-of-sample AUC change -0.011, gain in 3 of 4 windows
+    non-state (communal, sectarian, militia)   low rule of law: thin room 7 of 213 (3.3%), ample room 17 of 439 (3.9%), Fisher p 0.827; high rule of law 17 of 1692; weight on room -0.14 (-0.56 to +0.38), on rule of law x room -0.08 (-0.70 to +0.58); out-of-sample AUC change +0.006, gain in 2 of 3 windows
+    one-sided (killing of civilians)           low rule of law: thin room 11 of 196 (5.6%), ample room 19 of 391 (4.9%), Fisher p 0.695; high rule of law 22 of 1673; weight on room -0.23 (-0.74 to +0.41), on rule of law x room +0.29 (-0.45 to +0.92); out-of-sample AUC change -0.007, gain in 0 of 4 windows
+    any kind                                   low rule of law: thin room 12 of 139 (8.6%), ample room 20 of 310 (6.5%), Fisher p 0.430; high rule of law 27 of 1569; weight on room -0.20 (-0.67 to +0.44), on rule of law x room +0.07 (-0.52 to +0.81); out-of-sample AUC change -0.014, gain in 2 of 4 windows
+  fiscal balance, % of GDP: 123 countries, 2633 country-years
+    state-based                                low rule of law: thin room 14 of 276 (5.1%), ample room 12 of 264 (4.5%), Fisher p 0.842; high rule of law 11 of 1671; weight on room -0.19 (-1.13 to +0.30), on rule of law x room +0.30 (-0.31 to +1.21); out-of-sample AUC change -0.007, gain in 1 of 4 windows
+    non-state (communal, sectarian, militia)   low rule of law: thin room 12 of 331 (3.6%), ample room 12 of 335 (3.6%), Fisher p 1.000; high rule of law 17 of 1723; weight on room -0.34 (-0.71 to +0.01), on rule of law x room +0.16 (-0.29 to +0.51); out-of-sample AUC change +0.005, gain in 2 of 3 windows
+    one-sided (killing of civilians)           low rule of law: thin room 17 of 306 (5.6%), ample room 13 of 296 (4.4%), Fisher p 0.577; high rule of law 22 of 1699; weight on room -0.25 (-0.91 to +0.38), on rule of law x room +0.52 (-0.23 to +1.28); out-of-sample AUC change -0.008, gain in 2 of 4 windows
+    any kind                                   low rule of law: thin room 17 of 237 (7.2%), ample room 15 of 227 (6.6%), Fisher p 0.856; high rule of law 27 of 1591; weight on room -0.17 (-0.77 to +0.29), on rule of law x room +0.26 (-0.23 to +0.97); out-of-sample AUC change -0.010, gain in 2 of 4 windows
+  government debt, % of average tax revenues: 123 countries, 2576 country-years
+    state-based                                low rule of law: thin room 15 of 303 (5.0%), ample room 11 of 219 (5.0%), Fisher p 1.000; high rule of law 11 of 1643; weight on room -0.24 (-0.71 to +0.57), on rule of law x room +0.33 (-0.26 to +0.91); out-of-sample AUC change -0.017, gain in 1 of 4 windows
+    non-state (communal, sectarian, militia)   low rule of law: thin room 15 of 358 (4.2%), ample room 9 of 294 (3.1%), Fisher p 0.533; high rule of law 17 of 1692; weight on room +0.14 (-0.32 to +0.67), on rule of law x room -0.25 (-0.69 to +0.28); out-of-sample AUC change -0.007, gain in 2 of 3 windows
+    one-sided (killing of civilians)           low rule of law: thin room 19 of 321 (5.9%), ample room 11 of 266 (4.1%), Fisher p 0.353; high rule of law 22 of 1673; weight on room -0.13 (-0.63 to +0.50), on rule of law x room +0.28 (-0.33 to +0.89); out-of-sample AUC change -0.003, gain in 1 of 4 windows
+    any kind                                   low rule of law: thin room 19 of 244 (7.8%), ample room 13 of 205 (6.3%), Fisher p 0.586; high rule of law 27 of 1569; weight on room -0.16 (-0.72 to +0.31), on rule of law x room +0.12 (-0.38 to +0.79); out-of-sample AUC change -0.031, gain in 0 of 4 windows
+  sovereign rating: 115 countries, 2403 country-years
+    state-based                                low rule of law: thin room 21 of 334 (6.3%), ample room 3 of 80 (3.8%), Fisher p 0.593; high rule of law 11 of 1619; weight on room -0.15 (-0.61 to +0.79), on rule of law x room -0.03 (-0.93 to +0.50); out-of-sample AUC change +0.003, gain in 3 of 4 windows
+    non-state (communal, sectarian, militia)   low rule of law: thin room 15 of 419 (3.6%), ample room 1 of 113 (0.9%), Fisher p 0.213; high rule of law 16 of 1669; weight on room -0.45 (-1.02 to +0.20), on rule of law x room -0.25 (-0.94 to +0.45); out-of-sample AUC change +0.013, gain in 2 of 3 windows
+    one-sided (killing of civilians)           low rule of law: thin room 15 of 382 (3.9%), ample room 7 of 93 (7.5%), Fisher p 0.166; high rule of law 22 of 1646; weight on room +0.05 (-0.92 to +0.85), on rule of law x room -0.14 (-0.82 to +0.51); out-of-sample AUC change -0.007, gain in 0 of 4 windows
+    any kind                                   low rule of law: thin room 25 of 294 (8.5%), ample room 3 of 68 (4.4%), Fisher p 0.321; high rule of law 26 of 1542; weight on room -0.43 (-1.15 to +0.45), on rule of law x room +0.21 (-0.64 to +0.98); out-of-sample AUC change -0.005, gain in 2 of 4 windows
+  trust and fiscal room, surveyed countries, predictor years 2020-2024, onsets of any kind: low trust with thin room / low trust with ample room / high trust
+    government debt, % of GDP                    1 of 21 / 4 of 26 / 1 of 92   (32 countries)
+    fiscal balance, % of GDP                     3 of 27 / 2 of 20 / 1 of 92   (32 countries)
+    government debt, % of average tax revenues   3 of 26 / 2 of 21 / 1 of 92   (32 countries)
+    sovereign rating                             5 of 42 / 0 of 5 / 1 of 92   (32 countries)

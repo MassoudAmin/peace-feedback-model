@@ -1,0 +1,31 @@
+Truth and recovered values: median and 10-90 percent range over 100 synthetic panels of 100 plays each
+
+transparency 0.9   (share of plays that fail: 0 percent)
+quantity                                                     truth   median      10-90 percent  sign right
+A: persistence of violence from the record alone              0.22    -0.24    -0.25 to -0.24     0 percent
+B: open-loop persistence, with an enforcement series          0.22     0.18     0.17 to  0.20   100 percent
+B: enforcement-by-trust gain b3*T                             0.36     0.22     0.21 to  0.23   100 percent
+C: net gain of the fear loop, with a fear series             -0.26    -0.42    -0.42 to -0.41   100 percent
+C: violence-to-fear gain c1                                   0.30     0.32     0.32 to  0.32   100 percent
+D: restraint m, with both arms series                         0.30     0.30     0.30 to  0.30   100 percent
+D: reaction to the rival (k times transparency)               0.09     0.09     0.09 to  0.09   100 percent
+
+transparency 0.6   (share of plays that fail: 2 percent)
+quantity                                                     truth   median      10-90 percent  sign right
+A: persistence of violence from the record alone              0.22    -0.14    -0.15 to -0.13     0 percent
+B: open-loop persistence, with an enforcement series          0.22     0.16     0.15 to  0.17   100 percent
+B: enforcement-by-trust gain b3*T                             0.36     0.16     0.16 to  0.17   100 percent
+C: net gain of the fear loop, with a fear series             -0.14    -0.36    -0.37 to -0.35   100 percent
+C: violence-to-fear gain c1                                   0.30     0.43     0.43 to  0.44   100 percent
+D: restraint m, with both arms series                         0.30     0.23     0.20 to  0.26   100 percent
+D: reaction to the rival (k times transparency)               0.06     0.04     0.02 to  0.05   100 percent
+
+transparency 0.3   (share of plays that fail: 96 percent)
+quantity                                                     truth   median      10-90 percent  sign right
+A: persistence of violence from the record alone              0.22     0.12     0.11 to  0.12   100 percent
+B: open-loop persistence, with an enforcement series          0.22     0.14     0.14 to  0.14   100 percent
+B: enforcement-by-trust gain b3*T                             0.36     0.06     0.06 to  0.06   100 percent
+C: net gain of the fear loop, with a fear series             -0.02    -0.67    -0.68 to -0.66   100 percent
+C: violence-to-fear gain c1                                   0.30     0.96     0.95 to  0.97   100 percent
+D: restraint m, with both arms series                         0.30     0.00     0.00 to  0.01    99 percent
+D: reaction to the rival (k times transparency)               0.03    -0.02    -0.02 to -0.02     0 percent

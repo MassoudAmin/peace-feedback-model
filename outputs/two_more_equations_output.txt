@@ -1,0 +1,13 @@
+
+== Arms equation: 2671 country-years, 108 countries, fitted on changes 1991-2020
+   own spending (minus restraint m)               -0.660   (95 percent interval -0.742 to -0.072)
+   neighbors' spending (reaction k)               +0.072   (95 percent interval -0.025 to +0.291)
+   violence at home                               +0.106   (95 percent interval -0.002 to +0.169)
+   held-out changes 2021-2024: 387 country-years; squared error 0.564 against 0.396 for a forecast of no change beyond the country mean (-43 percent)
+   restraint m 0.660, reaction k 0.072; m exceeds k in 99 percent of resamples; reaction k above zero in 85 percent
+
+== Reserve equation: 2002 country-years, 117 countries, fitted on changes 1991-2020
+   own reserves (minus adjustment a)              -0.171   (95 percent interval -0.238 to -0.108)
+   military spending (minus kappa)                -0.152   (95 percent interval -0.252 to -0.031)
+   violence at home (minus theta)                 +0.068   (95 percent interval +0.004 to +0.120)
+   held-out changes 2021-2024: 435 country-years; squared error 1.902 against 2.239 for a forecast of no change beyond the country mean (+15 percent)

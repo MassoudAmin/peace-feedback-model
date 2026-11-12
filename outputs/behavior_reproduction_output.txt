@@ -1,0 +1,176 @@
+fitted on 1991-2020: phi 0.80 per year, process variance 5.10, measurement variance 0.58
+
+== Fit period 1991-2020: 500 panels simulated from the fitted equation
+statistic                                                         record  simulated median    10-90 percent  inside
+share of country-years with zero recorded deaths                    0.80              0.80    0.79 to 0.81    yes
+new conflicts (25 or more after two years below)                     113               112     101 to 126     yes
+share of new conflicts that follow a year with zero deaths          0.58              0.22    0.18 to 0.28    NO
+war onsets (1,000 or more after two years below)                      62                47      38 to 55      NO
+country-years at 1,000 or more deaths                                249               121      98 to 147     NO
+P(1,000 or more next year | 0 this year), percent                   0.21              0.00    0.00 to 0.04    NO
+P(1,000 or more next year | 1-24 this year), percent                1.82              1.22    0.73 to 1.77    NO
+P(1,000 or more next year | 25-99 this year), percent               3.08              6.25    4.12 to 9.05    NO
+P(1,000 or more next year | 100-499 this year), percent             6.06             15.28   11.59 to 18.68   NO
+P(1,000 or more next year | 500-999 this year), percent            27.69             25.00   17.99 to 34.00   yes
+year-to-year correlation of log deaths, active years                0.78              0.62    0.58 to 0.66    NO
+countries with any year at 25 or more deaths                          84                75      69 to 79      NO
+3 of 12 record statistics lie inside the simulated 10-90 percent band
+
+== Held-out years 2021-2024: 500 panels simulated forward from the 2020 state
+statistic                                                         record  simulated median    10-90 percent  inside
+share of country-years with zero recorded deaths                    0.76              0.78    0.76 to 0.80    yes
+new conflicts (25 or more after two years below)                   12.00             11.00    8.00 to 15.00   yes
+share of new conflicts that follow a year with zero deaths          0.42              0.31    0.14 to 0.50    yes
+war onsets (1,000 or more after two years below)                   10.00             11.00    8.00 to 15.00   yes
+country-years at 1,000 or more deaths                                 44                31      23 to 39      NO
+P(1,000 or more next year | 0 this year), percent                   0.00              0.00    0.00 to 0.16    yes
+P(1,000 or more next year | 1-24 this year), percent                0.00              1.46    0.00 to 3.96    yes
+P(1,000 or more next year | 25-99 this year), percent               5.00              7.41    2.85 to 14.81   yes
+P(1,000 or more next year | 100-499 this year), percent            10.00             17.24    8.55 to 27.05   yes
+P(1,000 or more next year | 500-999 this year), percent               30                25      11 to 39      yes
+year-to-year correlation of log deaths, active years                0.80              0.62    0.53 to 0.69    NO
+countries with any year at 25 or more deaths                          42                38      34 to 41      NO
+9 of 12 record statistics lie inside the simulated 10-90 percent band
+
+second form, fitted on 1991-2020 by maximum likelihood: persistence in active years rho 0.75; shift when active +1.08; shock: 57 percent sd 0.74, 43 percent mean -0.17 sd 3.35; log-likelihood -2957
+
+== Second form, fit period 1991-2020: 500 panels
+statistic                                                         record  simulated median    10-90 percent  inside
+share of country-years with zero recorded deaths                    0.80              0.80    0.80 to 0.81    yes
+new conflicts (25 or more after two years below)                     113               100      91 to 110     NO
+share of new conflicts that follow a year with zero deaths          0.58              0.31    0.26 to 0.37    NO
+war onsets (1,000 or more after two years below)                      62                68      60 to 76      yes
+country-years at 1,000 or more deaths                                249               261     226 to 294     yes
+P(1,000 or more next year | 0 this year), percent                   0.21              0.06    0.02 to 0.10    NO
+P(1,000 or more next year | 1-24 this year), percent                1.82              2.57    1.70 to 3.64    yes
+P(1,000 or more next year | 25-99 this year), percent               3.08              7.25    4.90 to 9.84    NO
+P(1,000 or more next year | 100-499 this year), percent             6.06             14.25   11.36 to 17.18   NO
+P(1,000 or more next year | 500-999 this year), percent            27.69             29.45   23.23 to 36.05   yes
+year-to-year correlation of log deaths, active years                0.78              0.72    0.69 to 0.75    NO
+countries with any year at 25 or more deaths                          84                76      71 to 81      NO
+5 of 12 record statistics lie inside the simulated 10-90 percent band
+
+== Second form, held-out years 2021-2024: 500 panels simulated forward from the 2020 record
+statistic                                                         record  simulated median    10-90 percent  inside
+share of country-years with zero recorded deaths                    0.76              0.79    0.78 to 0.80    NO
+new conflicts (25 or more after two years below)                   12.00              8.00    5.00 to 11.00   NO
+share of new conflicts that follow a year with zero deaths          0.42              0.33    0.14 to 0.57    yes
+war onsets (1,000 or more after two years below)                   10.00             14.00   11.00 to 17.00   NO
+country-years at 1,000 or more deaths                                 44                47      37 to 56      yes
+P(1,000 or more next year | 0 this year), percent                   0.00              0.00    0.00 to 0.16    yes
+P(1,000 or more next year | 1-24 this year), percent                0.00              2.33    0.00 to 6.01    yes
+P(1,000 or more next year | 25-99 this year), percent               5.00              7.41    3.03 to 14.83   yes
+P(1,000 or more next year | 100-499 this year), percent            10.00             16.30    9.38 to 25.71   yes
+P(1,000 or more next year | 500-999 this year), percent               30                32      18 to 47      yes
+year-to-year correlation of log deaths, active years                0.80              0.69    0.62 to 0.75    NO
+countries with any year at 25 or more deaths                          42                39      36 to 42      yes
+8 of 12 record statistics lie inside the simulated 10-90 percent band
+
+third form, 3 hidden regimes, fitted on 1990-2020: log-likelihood -3540
+  regime 1: records zero in 99 percent of years; level when recorded exp(1.0) = 2 deaths; stays 98 percent; moves to 2: 1.5, 3: 0.3
+  regime 2: records zero in 17 percent of years; level when recorded exp(3.3) = 26 deaths; stays 83 percent; moves to 1: 11.3, 3: 5.3
+  regime 3: records zero in 0 percent of years; level when recorded exp(6.7) = 827 deaths; stays 92 percent; moves to 1: 2.4, 2: 5.8
+
+== Third form (3 regimes), fit period 1991-2020: 500 panels
+statistic                                                         record  simulated median    10-90 percent  inside
+share of country-years with zero recorded deaths                    0.80              0.80    0.78 to 0.82    yes
+new conflicts (25 or more after two years below)                     113               136     121 to 155     NO
+share of new conflicts that follow a year with zero deaths          0.58              0.54    0.48 to 0.59    yes
+war onsets (1,000 or more after two years below)                      62               112      93 to 129     NO
+country-years at 1,000 or more deaths                                249               287     243 to 336     yes
+P(1,000 or more next year | 0 this year), percent                   0.21              0.21    0.14 to 0.32    yes
+P(1,000 or more next year | 1-24 this year), percent                1.82              2.72    1.57 to 4.14    yes
+P(1,000 or more next year | 25-99 this year), percent               3.08              8.66    6.07 to 11.11   NO
+P(1,000 or more next year | 100-499 this year), percent             6.06             29.17   25.41 to 33.19   NO
+P(1,000 or more next year | 500-999 this year), percent            27.69             39.40   33.81 to 44.74   NO
+year-to-year correlation of log deaths, active years                0.78              0.53    0.50 to 0.56    NO
+countries with any year at 25 or more deaths                          84               101      93 to 109     NO
+5 of 12 record statistics lie inside the simulated 10-90 percent band
+
+== Third form (3 regimes), held-out years 2021-2024: 500 panels simulated forward from 2020
+statistic                                                         record  simulated median    10-90 percent  inside
+share of country-years with zero recorded deaths                    0.76              0.79    0.78 to 0.81    NO
+new conflicts (25 or more after two years below)                   12.00             18.00   13.00 to 22.00   NO
+share of new conflicts that follow a year with zero deaths          0.42              0.50    0.35 to 0.65    yes
+war onsets (1,000 or more after two years below)                   10.00             19.00   15.00 to 22.00   NO
+country-years at 1,000 or more deaths                                 44                40      32 to 49      yes
+P(1,000 or more next year | 0 this year), percent                   0.00              0.16    0.00 to 0.48    yes
+P(1,000 or more next year | 1-24 this year), percent                0.00              2.44    0.00 to 5.71    yes
+P(1,000 or more next year | 25-99 this year), percent               5.00              7.41    2.70 to 13.89   yes
+P(1,000 or more next year | 100-499 this year), percent            10.00             30.43   21.41 to 40.78   NO
+P(1,000 or more next year | 500-999 this year), percent               30                39      26 to 53      yes
+year-to-year correlation of log deaths, active years                0.80              0.53    0.45 to 0.61    NO
+countries with any year at 25 or more deaths                          42                46      42 to 51      yes
+7 of 12 record statistics lie inside the simulated 10-90 percent band
+
+third form, 4 hidden regimes, fitted on 1990-2020: log-likelihood -3439
+  regime 1: records zero in 100 percent of years; level when recorded exp(0.9) = 2 deaths; stays 99 percent; moves to 2: 0.6, 3: 0.5, 4: 0.2
+  regime 2: records zero in 73 percent of years; level when recorded exp(1.5) = 4 deaths; stays 80 percent; moves to 1: 4.6, 3: 13.4, 4: 2.4
+  regime 3: records zero in 1 percent of years; level when recorded exp(3.8) = 45 deaths; stays 74 percent; moves to 1: 5.7, 2: 14.0, 4: 6.8
+  regime 4: records zero in 1 percent of years; level when recorded exp(6.9) = 947 deaths; stays 90 percent; moves to 1: 2.0, 2: 2.1, 3: 5.6
+
+== Third form (4 regimes), fit period 1991-2020: 500 panels
+statistic                                                         record  simulated median    10-90 percent  inside
+share of country-years with zero recorded deaths                    0.80              0.80    0.78 to 0.82    yes
+new conflicts (25 or more after two years below)                     113               113     100 to 131     yes
+share of new conflicts that follow a year with zero deaths          0.58              0.57    0.51 to 0.63    yes
+war onsets (1,000 or more after two years below)                      62               105      87 to 122     NO
+country-years at 1,000 or more deaths                                249               290     241 to 336     yes
+P(1,000 or more next year | 0 this year), percent                   0.21              0.21    0.13 to 0.31    yes
+P(1,000 or more next year | 1-24 this year), percent                1.82              2.41    1.32 to 3.73    yes
+P(1,000 or more next year | 25-99 this year), percent               3.08              7.16    5.03 to 9.75    NO
+P(1,000 or more next year | 100-499 this year), percent             6.06             27.77   24.01 to 31.99   NO
+P(1,000 or more next year | 500-999 this year), percent            27.69             41.59   36.49 to 46.56   NO
+year-to-year correlation of log deaths, active years                0.78              0.56    0.52 to 0.59    NO
+countries with any year at 25 or more deaths                          84                90      82 to 97      yes
+7 of 12 record statistics lie inside the simulated 10-90 percent band
+
+== Third form (4 regimes), held-out years 2021-2024: 500 panels simulated forward from 2020
+statistic                                                         record  simulated median    10-90 percent  inside
+share of country-years with zero recorded deaths                    0.76              0.80    0.78 to 0.81    NO
+new conflicts (25 or more after two years below)                   12.00             15.00   11.00 to 19.00   yes
+share of new conflicts that follow a year with zero deaths          0.42              0.53    0.37 to 0.70    yes
+war onsets (1,000 or more after two years below)                   10.00             18.00   14.00 to 22.00   NO
+country-years at 1,000 or more deaths                                 44                41      33 to 49      yes
+P(1,000 or more next year | 0 this year), percent                   0.00              0.16    0.00 to 0.48    yes
+P(1,000 or more next year | 1-24 this year), percent                0.00              2.70    0.00 to 6.06    yes
+P(1,000 or more next year | 25-99 this year), percent               5.00              6.74    2.27 to 12.50   yes
+P(1,000 or more next year | 100-499 this year), percent            10.00             30.37   20.00 to 40.62   NO
+P(1,000 or more next year | 500-999 this year), percent               30                43      30 to 58      yes
+year-to-year correlation of log deaths, active years                0.80              0.54    0.46 to 0.62    NO
+countries with any year at 25 or more deaths                          42                44      40 to 49      yes
+8 of 12 record statistics lie inside the simulated 10-90 percent band
+
+fourth form, fitted on 1991-2020 by maximum likelihood: log-likelihood -3075; persistence in active years rho 0.59; quiet-year level calm -5.58, tense -1.68; yearly chance calm to tense 1.2 percent, tense to calm 5.2 percent; share of time tense 19 percent
+
+== Fourth form, fit period 1991-2020: 500 panels
+statistic                                                         record  simulated median    10-90 percent  inside
+share of country-years with zero recorded deaths                    0.80              0.79    0.78 to 0.80    NO
+new conflicts (25 or more after two years below)                     113               109      98 to 121     yes
+share of new conflicts that follow a year with zero deaths          0.58              0.34    0.28 to 0.40    NO
+war onsets (1,000 or more after two years below)                      62                77      68 to 85      NO
+country-years at 1,000 or more deaths                                249               191     167 to 217     NO
+P(1,000 or more next year | 0 this year), percent                   0.21              0.04    0.02 to 0.11    NO
+P(1,000 or more next year | 1-24 this year), percent                1.82              1.40    0.78 to 2.04    yes
+P(1,000 or more next year | 25-99 this year), percent               3.08              7.28    5.24 to 9.53    NO
+P(1,000 or more next year | 100-499 this year), percent             6.06             17.18   14.16 to 20.26   NO
+P(1,000 or more next year | 500-999 this year), percent            27.69             28.99   22.81 to 34.83   yes
+year-to-year correlation of log deaths, active years                0.78              0.61    0.58 to 0.64    NO
+countries with any year at 25 or more deaths                          84                77      72 to 81      NO
+3 of 12 record statistics lie inside the simulated 10-90 percent band
+
+== Fourth form, held-out years 2021-2024: 500 panels simulated forward from 2020
+statistic                                                         record  simulated median    10-90 percent  inside
+share of country-years with zero recorded deaths                    0.76              0.78    0.77 to 0.79    NO
+new conflicts (25 or more after two years below)                   12.00             10.00    7.00 to 13.00   yes
+share of new conflicts that follow a year with zero deaths          0.42              0.40    0.21 to 0.57    yes
+war onsets (1,000 or more after two years below)                   10.00             15.00   12.00 to 19.00   NO
+country-years at 1,000 or more deaths                                 44                39      30 to 47      yes
+P(1,000 or more next year | 0 this year), percent                   0.00              0.00    0.00 to 0.16    yes
+P(1,000 or more next year | 1-24 this year), percent                0.00              2.00    0.00 to 4.35    yes
+P(1,000 or more next year | 25-99 this year), percent               5.00              8.33    2.86 to 14.72   yes
+P(1,000 or more next year | 100-499 this year), percent            10.00             20.00   12.50 to 30.00   NO
+P(1,000 or more next year | 500-999 this year), percent               30                30      18 to 44      yes
+year-to-year correlation of log deaths, active years                0.80              0.61    0.53 to 0.68    NO
+countries with any year at 25 or more deaths                          42                41      38 to 44      yes
+8 of 12 record statistics lie inside the simulated 10-90 percent band

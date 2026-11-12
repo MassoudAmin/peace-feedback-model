@@ -1,0 +1,44 @@
+== Coupled system: 1997 country-years, 117 countries, fitted on 1991-2020
+   entry of A (row: next year; column: this year)
+   violence  <- violence  +0.546  (95 percent interval +0.417 to +0.634)
+   violence  <- arms      +0.024  (95 percent interval -0.091 to +0.133)
+   violence  <- reserves  -0.009  (95 percent interval -0.034 to +0.013)
+   arms      <- violence  -0.002  (95 percent interval -0.043 to +0.027)
+   arms      <- arms      +0.738  (95 percent interval +0.680 to +0.812)
+   arms      <- reserves  -0.003  (95 percent interval -0.012 to +0.003)
+   reserves  <- violence  +0.067  (95 percent interval +0.004 to +0.119)
+   reserves  <- arms      -0.141  (95 percent interval -0.237 to -0.017)
+   reserves  <- reserves  +0.830  (95 percent interval +0.762 to +0.882)
+   eigenvalues of A: [0.833 0.733 0.548]; largest in size 0.833 (interval 0.772 to 0.881); below 1 in 100 percent of resamples
+   largest eigenvalue of the uncoupled form: 0.835
+   half-life of the slowest mode: 3.8 years
+   loop gain violence -> arms -> reserves -> violence: -0.00000 (interval -0.00006 to +0.00010)
+   share of in-sample error removed by the cross terms: violence 0.09 percent, arms 0.04 percent, reserves 0.78 percent
+   chance of a share that large with unrelated cross series: violence 0.356, arms 0.656, reserves 0.002
+
+== Held-out, one year ahead, 2021-2024: 435 country-years
+   coupled    squared error: violence 1.056, arms 2.053, reserves 1.605
+   uncoupled  squared error: violence 1.071, arms 2.047, reserves 1.488
+   no change  squared error: violence 1.086, arms 1.561, reserves 1.820
+
+== Held-out, free run from the 2020 state through 2024: 105 countries
+   coupled    squared error: violence 1.439, arms 6.253, reserves 3.607
+   uncoupled  squared error: violence 1.425, arms 6.247, reserves 3.652
+   no change  squared error: violence 1.612, arms 5.855, reserves 6.646
+
+== Bounds on the largest eigenvalue
+   with country constants 0.833; without them 0.989; with constants, countries with 25 or more years (31 countries) 0.897
+   couplings into violence without constants: arms +0.014, reserves +0.005; into reserves: violence +0.037, arms +0.002
+
+== Violence row refitted on years with fighting under way: 358 country-years, 28 countries
+   violence  <- violence  +0.562  (95 percent interval +0.420 to +0.713)
+   violence  <- arms      -0.036  (95 percent interval -0.280 to +0.182)
+   violence  <- reserves  -0.029  (95 percent interval -0.088 to +0.036)
+
+== Persistence of monthly log(1 + deaths) by lag, 111 countries with recorded deaths, 1989-2024
+   lag in months   pooled   around each country's mean   one-month coefficient compounded
+               1     0.85                         0.74                              0.85
+               3     0.81                         0.67                              0.62
+               6     0.78                         0.61                              0.38
+              12     0.76                         0.57                              0.15
+              24     0.70                         0.45                              0.02

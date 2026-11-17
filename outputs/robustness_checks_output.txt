@@ -1,0 +1,21 @@
+== A. Common test sample (every input present)
+train 3191 / 75  test 450 / 11
+Conflict history from 1989       test AUC 0.803
+Conflict history from 1946       test AUC 0.804
++ institutional level            test AUC 0.829
++ institutional 3-year change    test AUC 0.841
++ military share of GDP          test AUC 0.845
+
+== B. Unpenalized refit in statsmodels, standardized inputs
+Conflict history from 1946       test AUC 0.834
++ institutional level            test AUC 0.842
+
+== C. Each held-out onset removed in turn
+Conflict history from 1946       test AUC 0.834; with one onset removed 0.818 to 0.874
++ military share of GDP          test AUC 0.845; with one onset removed 0.830 to 0.892
+
+== D. Fitting period ended in other years (conflict history from 1946)
+fit through 2018: test 970 / 15  test AUC 0.788
+fit through 2019: test 806 / 12  test AUC 0.787
+fit through 2020: test 645 / 11  test AUC 0.834
+fit through 2021: test 483 / 6  test AUC 0.946

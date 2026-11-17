@@ -19,6 +19,7 @@ data/      empty; put the downloaded source files here (see data/README.md)
 ```
 pip install -r requirements.txt
 python3 code/table_11_2_from_panels.py
+python3 code/robustness_checks.py
 python3 code/trust_pair_from_panels.py
 python3 code/trust_forecast_check.py
 python3 code/peace_game.py
@@ -37,7 +38,6 @@ python3 code/fig4.py
 | Script | Reads | Reproduces in the book |
 |---|---|---|
 | `table_11_2_from_panels.py` | `panels/panel2.csv` | Table 11.2; Table D.2; the held-out checks of Chapter 11 and Appendix D (base rate, Brier score, calibration by thirds, top-tenth capture, bootstrap by country, permutation test, escalation baseline) | 
-python3 code/robustness_checks.py
 | `robustness_checks.py` | `panels/panel2.csv` | four checks on Table 11.2: the five models on one common test sample, an unpenalized refit in statsmodels, the test AUC with each held-out onset removed in turn, and the fitting period ended in 2018, 2019, 2020, or 2021 (Appendix D) |
 | `trust_pair_from_panels.py` | `panels/panel2.csv`, `wvs7_country_measures_weighted.csv`, `pair_year_panel.csv` | Tables D.11 and D.12 (formerly 11.3 and 11.4); the trust rank correlation of Figure 11.3; the pair escalation ladder, pair escalation AUC, and reciprocity coefficients |
 | `trust_forecast_check.py` | `panels/panel2.csv`, `wvs7_country_measures_weighted.csv` | the held-out check of Chapter 11 on whether trust and its product with rule of law improve the yearly onset forecast |
